@@ -1,0 +1,10 @@
+.material-icons {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.tooltip-inner {
+  background-color: grey;
+}
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: grey;
+}

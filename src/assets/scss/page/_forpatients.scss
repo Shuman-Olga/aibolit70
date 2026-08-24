@@ -1,0 +1,14 @@
+#pravila {
+  li {
+    padding: 10px 0;
+    &::marker {
+      font-weight: bold;
+    }
+  }
+}
+
+#page2 {
+  img {
+    width: 100px;
+  }
+}

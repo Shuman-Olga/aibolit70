@@ -1,0 +1,8 @@
+#blog {
+  .block-posts {
+    &:hover {
+      transform: scale(1.05);
+      z-index: 2;
+    }
+  }
+}

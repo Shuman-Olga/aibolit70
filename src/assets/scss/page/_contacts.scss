@@ -1,0 +1,24 @@
+#contacts,
+#forpatients {
+  .block-map {
+    width: max-content;
+    margin: 0 auto;
+    border: 4px solid #496f6e;
+  }
+  .door-img,
+  .clock-png,
+  .auto-png {
+    width: 40px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 680px) {
+  #contacts {
+    .block-map {
+      display: none;
+    }
+    .position {
+      flex-direction: column;
+    }
+  }
+}

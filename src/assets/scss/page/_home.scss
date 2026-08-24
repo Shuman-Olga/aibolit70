@@ -1,0 +1,43 @@
+#home {
+  margin-top: 2rem;
+  #breadcrumbs {
+    display: none;
+  }
+}
+#blockimg {
+  .img-background {
+    width: auto !important;
+  }
+  margin-top: 1rem;
+  h4 {
+    color: #496f6e;
+  }
+  ul li {
+    padding: 0.3rem;
+    color: #496f6e;
+    a {
+      text-decoration: none;
+      color: #ff9308;
+      font-weight: bold;
+    }
+    &:hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+#blockinfo {
+  h1 {
+    color: #496f6e;
+  }
+  .img-foto {
+    border: 2 solid #ff9308;
+    border-radius: 1rem;
+  }
+}
+@media (max-width: 660px) {
+  #home {
+    margin-top: 0;
+  }
+}

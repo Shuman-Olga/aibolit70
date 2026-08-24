@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+Disallow: /error/
+Disallow: /search/
+Sitemap: https://aibolit.tom.ru/sitemap.xml

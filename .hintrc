@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "development"
+  ],
+  
+  "hints": {
+    "apple-touch-icons": "warning",
+    "sri": "warning"
+  }
+}

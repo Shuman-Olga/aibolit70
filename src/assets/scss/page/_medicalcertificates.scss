@@ -1,0 +1,57 @@
+// #santornokurortnyakarta,
+// #spravkazdorove {
+//   .size-img {
+//     width: 25vw;
+//   }
+// }
+#spravkavdetskiisad {
+  .ulandimg {
+    display: flow-root;
+  }
+  // .size-img {
+  //   width: 15vw;
+  //   float: left;
+  //   margin: 10px 20px 2px 0px;
+  // }
+  ul li {
+    padding: 5px 0;
+  }
+  p {
+    text-align: justify;
+  }
+}
+@media (max-width: 1200px) {
+  #medicalcertificates {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1000px) {
+  #medicalcertificates,
+  #spravkavdetskiisad {
+    .block-foto {
+      flex-direction: column;
+      align-items: center;
+    }
+    .w-75 {
+      width: 100% !important;
+    }
+  }
+}
+@media (max-width: 800px) {
+  #spravkavshkolu,
+  #spravkavdetskiisad,
+  #spravkavbassein {
+    .block-foto {
+      flex-direction: column;
+      align-items: center;
+    }
+    .w-75 {
+      width: 100% !important;
+    }
+  }
+}
+@media (max-width: 660px) {
+  #medicalcertificates {
+    margin-top: 0;
+  }
+}

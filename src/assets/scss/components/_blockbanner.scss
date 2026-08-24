@@ -1,0 +1,32 @@
+#blockbanner {
+  p {
+    text-align: justify;
+  }
+  hr {
+    border: 5px solid #e6a400;
+    opacity: 0.8;
+    margin-right: 0 !important;
+  }
+  h2 {
+    color: #3e5352;
+  }
+  .card img {
+    width: 86px;
+    margin: 0 auto;
+  }
+  .img-block {
+    float: left;
+  }
+  p {
+    text-align: justify;
+  }
+}
+@media (max-width: 800px) {
+  #blockbanner .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ms-5 {
+    margin-left: 0 !important;
+  }
+}

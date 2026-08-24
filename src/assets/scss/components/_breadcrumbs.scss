@@ -1,0 +1,42 @@
+#breadcrumbs {
+  font-size: 18px;
+  margin: 15px auto;
+
+  .material-icons {
+    color: #496f6e;
+    transition: 1s;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  .underline-one {
+    position: relative;
+    a {
+      text-decoration: none;
+      color: #496f6e;
+    }
+  }
+  .underline-one:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+  }
+
+  .underline-one:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.5s;
+  }
+}

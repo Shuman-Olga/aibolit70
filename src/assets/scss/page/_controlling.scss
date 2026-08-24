@@ -1,0 +1,21 @@
+#controlling {
+  a {
+    font-size: 20px;
+    color: rgb(24, 24, 24);
+  }
+  .arrow-svg {
+    display: inline;
+    top: 10%;
+    left: 15%;
+    padding-right: 15px;
+    svg {
+      fill: #83e6d4;
+    }
+  }
+}
+@media (max-width: 980px) {
+  .position-block {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

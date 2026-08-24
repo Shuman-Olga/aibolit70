@@ -1,0 +1,43 @@
+#header {
+  font-size: 18px;
+}
+#header .block-logo {
+  text-align: center;
+}
+#header .block-logo p {
+  padding-top: 0.5rem;
+}
+#header .phone {
+  font-size: 2rem;
+  color: #496f6e;
+  font-weight: bold;
+}
+#header .img-logo {
+  width: 15vw;
+}
+#header .date {
+  margin: 0;
+  color: #ffcb08;
+}
+
+@media (max-width: 998px) {
+  #header {
+    position: relative;
+  }
+  #header .header-colum {
+    flex-direction: column;
+  }
+}
+@media (max-width: 660px) {
+  #header .date {
+    display: none;
+  }
+  #header .img-logo {
+    width: 40vw;
+  }
+}
+@media (max-width: 460px) {
+  #header {
+    padding: 15px;
+  }
+}

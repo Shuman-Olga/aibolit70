@@ -1,0 +1,53 @@
+#blockreklamaone,
+#blockreklamatwo,
+#blockreklamafour {
+  .block-reklama {
+    border: 2px solid #3e5352;
+  }
+  .blockback {
+    background: #3e5352;
+    color: white;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+}
+@media (max-width: 800px) {
+  #blockreklamaone,
+  #blockreklamatwo,
+  #blockreklamathree, #blockreklamafour {
+    .block-reklama {
+      flex-direction: column;
+    }
+  }
+}
+#blockreklamathree {
+  background: #3e5352;
+  max-width: 1000px;
+
+  .block-reklama {
+    border: 2px solid #3e5352;
+  }
+  .blockback {
+    color: white;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .block-img {
+    background: rgb(229, 234, 255);
+  }
+  img {
+    padding: 25px;
+    left: 50px;
+  }
+}

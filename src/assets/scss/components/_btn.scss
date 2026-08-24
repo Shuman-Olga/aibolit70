@@ -1,0 +1,17 @@
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 50%;
+  &:hover {
+    background: #3b5999;
+  }
+  &:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  .icon {
+    color: #ffffff;
+    transition: 0.5s;
+  }
+}

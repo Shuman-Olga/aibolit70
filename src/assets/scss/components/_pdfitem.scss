@@ -1,0 +1,39 @@
+#pdf-item {
+  font-size: 18px;
+  a {
+    font-size: 20px;
+    color: rgb(24, 24, 24);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      color: rgb(73, 111, 110);
+      text-decoration: underline;
+      i {
+        color: rgb(73, 111, 110);
+      }
+    }
+  }
+  .arrow-svg {
+    display: inline;
+    top: 10%;
+    left: 15%;
+    padding-right: 15px;
+    i {
+      color: #83e6d4;
+      font-size: 50px;
+    }
+  }
+  .btn {
+    background-color: #83e6d4;
+    border: 0;
+    &:hover {
+      background-color: #ceefe9;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #pdf-item {
+    flex-direction: column;
+  }
+}

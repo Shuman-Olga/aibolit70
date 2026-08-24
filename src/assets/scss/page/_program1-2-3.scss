@@ -1,0 +1,53 @@
+#programone,
+#programthree,
+#programtwo {
+  .block-table {
+    width: 70vw;
+    margin: 0 auto;
+  }
+  .font-size-min {
+    font-size: 10px;
+  }
+  .font-text {
+    font-size: 12px;
+  }
+
+  #uncontrolled-tab-example .nav-link {
+    font-size: 1.3vw;
+    color: black;
+    &:hover {
+      background-color: rgb(202, 182, 70);
+    }
+  }
+
+  .active {
+    background-color: #496f6e;
+    color: white !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #programone,
+  #programthree,
+  #programtwo {
+    .block-table {
+      margin: 0;
+      width: 100% !important;
+    }
+    .px-3 {
+      padding-right: 0 !important;
+    }
+    .progone-img {
+      width: 100%;
+    }
+    .ms-5 {
+      margin-left: 0 !important;
+    }
+    img {
+      width: 100%;
+    }
+    .fs-5 {
+      font-size: 16px !important;
+    }
+  }
+}
