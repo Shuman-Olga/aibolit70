@@ -25,7 +25,7 @@ RewriteRule ^ - [L]
 # Убираем двойные слэши (// → /)
 # =========================
 RewriteCond %{REQUEST_URI} ^/(.+)//+(.*)$
-RewriteRule ^ https://aibolit.tom.ru/%1/%2 [R=301,L]
+RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L]
 
 # -------------------------
 # ЕДИНЫЙ редирект:
@@ -34,7 +34,7 @@ RewriteRule ^ https://aibolit.tom.ru/%1/%2 [R=301,L]
 # -------------------------
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.aibolit\.tom\.ru$ [NC]
-RewriteRule ^ https://aibolit.tom.ru%{REQUEST_URI} [R=301,L]
+RewriteRule ^ https://aibolit70.ru%{REQUEST_URI} [R=301,L]
 
 # -------------------------
 # Добавляем trailing slash (ВАЖНО!)
@@ -42,13 +42,13 @@ RewriteRule ^ https://aibolit.tom.ru%{REQUEST_URI} [R=301,L]
 # -------------------------
 RewriteCond %{REQUEST_URI} !\.[^./]+$
 RewriteCond %{REQUEST_URI} !/$
-RewriteRule ^(.*)$ https://aibolit.tom.ru/$1/ [R=301,L]
+RewriteRule ^(.*)$ https://aibolit70.ru/$1/ [R=301,L]
 
 # =========================
 # REDIRECT INDEX FILES
 # =========================
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*(index|default|main)\.(html|php|htm)\ HTTP/ [NC]
-RewriteRule ^(([^/]+/)*)(index|default|main)\.(html|php|htm)$ https://aibolit.tom.ru/$1 [R=301,L]
+RewriteRule ^(([^/]+/)*)(index|default|main)\.(html|php|htm)$ https://aibolit70.ru/$1 [R=301,L]
 
 # =========================
 # EXISTING FILES & FOLDERS

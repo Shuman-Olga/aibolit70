@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 Disallow: /error/
 Disallow: /search/
-Sitemap: https://aibolit.tom.ru/sitemap.xml
+Sitemap: https://aibolit70.ru/sitemap.xml

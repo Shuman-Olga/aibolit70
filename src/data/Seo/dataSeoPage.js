@@ -7,7 +7,7 @@ export const dataSeo = [
       "Айболит. Вызов педиатра на дом в Томске, вызывать детского врача (ЛОР, невролог, окулист, хирург) на дом. Анализы на дому. Программы наблюдения детей на дому. Патронаж новорожденных.",
     keywords:
       "Айболит, детская медицинская служба, клиника, вызвать детский врач,вызов, педиатр, программы наблюдения, анализы, ребенок, новорожденного, на дом, цена, Томск, пригород",
-    urlname: "https://aibolit.tom.ru/",
+    urlname: "https://aibolit70.ru/",
     img: "aibolit.png",
   },
   {
@@ -17,7 +17,7 @@ export const dataSeo = [
       "Детская медицинская служба 'Айболит' предлагает услуги: вызов педиатра на дом, консультация детского врача на дому, программы наблюдения за ребенком на дому. Вакцинация. Анализы на ДОМУ. Патронаж новорожденных.",
     keywords:
       "узкие специалисты на дом, педиатр на дом томск, детский врач на дом, патронаж новорожденных,  Детская медицинская служба 'Айболит'",
-    urlname: "https://aibolit.tom.ru/o-nas/",
+    urlname: "https://aibolit70.ru/o-nas/",
     img: "massage.jpg",
   },
   {
@@ -27,7 +27,7 @@ export const dataSeo = [
       "Педиатры в детской медицинской службе Айболит. Педиатр на дом. Патронаж новорожденных.",
     keywords:
       "садовникова елена геннадьевна, остроухова наталья петровна, шевченко анастасия николаевна, петухова ольга викторовна, педиатр на дом томск, детский врач на дом, вызов платного педиатра, программы наблюдения за ребенком, вызвать педиатра",
-    urlname: "https://aibolit.tom.ru/doctors/",
+    urlname: "https://aibolit70.ru/doctors/",
     img: "massage.jpg",
   },
   {
@@ -37,7 +37,7 @@ export const dataSeo = [
       "ДЕТСКАЯ МЕДИЦИНСКАЯ СЛУЖБА 'АЙБОЛИТ' предлагает программы наблюдения за здоровьем ребенка. Квалифицированные специалисты постараются решить все проблемы со здоровьем, сопутствующие периоду роста ребёнка. Патронаж новорожденных",
     keywords:
       "Программа наблюдения за здоровьем детей, Патронаж новорожденного с рождения, Комплексная годовая программа для ребенка, программы наблюдения, патронаж новорожденного, ребенка, здоровьем, на дом, Томск, платно, вызов, педиатра, врача",
-    urlname: "https://aibolit.tom.ru/programmy-nablyudeniya-za-zdorovem/",
+    urlname: "https://aibolit70.ru/programmy-nablyudeniya-za-zdorovem/",
     img: "fibroma-u-rebenka.jpg",
   },
   {
@@ -47,7 +47,7 @@ export const dataSeo = [
       "Услуги педиатра и врачей на дому. Анализы. Программы наблюдения за ребенком. Онлайн консультация педиатра. ВЫЗОВ ПЕДИАТРА. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "вызов педиатра на дом Томск, педиатр на дом, детский врач на дом Томск, анализы на дому, программы наблюдения за ребенком, вызов платного педиатра на дом, лор, невролог на дом, консультация хирурга, хирург на дом, окулист, аллерголог, томск, патронаж новорожденного",
-    urlname: "https://aibolit.tom.ru/uslugi-i-ceny/",
+    urlname: "https://aibolit70.ru/uslugi-i-ceny/",
     img: "uslugi1.jpg",
   },
   {
@@ -57,7 +57,7 @@ export const dataSeo = [
       "Айболит детская медицинская служба, Наш адрес: ул. Герце на 68, стр.2, г. Томск. Наш телефон +7 (3822) 60-92-43",
     keywords:
       "ул. Герцена 68, айболит детская медицинская служба, педиатр на дом, вызов педиатра на дом, вызов платного педиатра, обслуживание на дому, патронаж новорожденного",
-    urlname: "https://aibolit.tom.ru/kontakty/",
+    urlname: "https://aibolit70.ru/kontakty/",
     img: "phone-tel.png",
   },
   {
@@ -67,7 +67,7 @@ export const dataSeo = [
       "В блоге мы расскажем о том что делает детский  врач когда приезжает на дом. О вакцинации. О все о заботе о малыше.",
     keywords:
       "ул. Герцена 68, айболит детская медицинская служба, педиатр на дом, вызов педиатра на дом, вызов платного педиатра, обслуживание на дому, патронаж новорожденноговызов, лор, невролога, педиатр, хирурга, гастроэнтеролога, на дом, платно, обслуживание, патронаж новорожденного, Томск",
-    urlname: "https://aibolit.tom.ru/blog/",
+    urlname: "https://aibolit70.ru/blog/",
     img: "aibolit.png",
   },
   {
@@ -76,7 +76,7 @@ export const dataSeo = [
     description: "Информация для пациентов, Режим работы, информация о врачах",
     keywords:
       "ул. Герцена 68, айболит детская медицинская служба, педиатр на дом, вызов педиатра на дом, вызов платного педиатра, обслуживание б патронаж новорожденного вызов, лор, невролог, педиатр, хирург, гастроэнтеролог, на дом, платно, , Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/",
+    urlname: "https://aibolit70.ru/pacientam/",
     img: "uslugi1.jpg",
   },
 
@@ -90,7 +90,7 @@ subpages page About
     description: "Айболит, Герцена 68 строение 2",
     keywords:
       "айболит в томске, герцена 68 строение 2, детские врачи на дом томск",
-    urlname: "https://aibolit.tom.ru/o-nas/kontroliruyushie-organizacii/",
+    urlname: "https://aibolit70.ru/o-nas/kontroliruyushie-organizacii/",
     img: "uslugi1.jpg",
   },
   {
@@ -99,7 +99,7 @@ subpages page About
     title: "Документы | Айболит",
     description: "Информация для пациентов. Документы | Айболит",
     keywords: "айболит детская медицинская служба, информация для пациентов",
-    urlname: "https://aibolit.tom.ru/o-nas/documents/",
+    urlname: "https://aibolit70.ru/o-nas/documents/",
     img: "uslugi1.jpg",
   },
 
@@ -109,7 +109,7 @@ subpages page About
     title: "Лицензии | Айболит",
     description: "Информация для пациентов. Лицензии | Айболит",
     keywords: "лицензии айболит, клиник айболит томск, врачи на дом",
-    urlname: "https://aibolit.tom.ru/o-nas/licenzii/",
+    urlname: "https://aibolit70.ru/o-nas/licenzii/",
     img: "uslugi1.jpg",
   },
   {
@@ -119,7 +119,7 @@ subpages page About
     description:
       "Наши партнеры, страховые компании, ДМС | Айболит-детская медицинская служба",
     keywords: "герцена 68 стр 2 томск, врачи клиника айболит томск",
-    urlname: "https://aibolit.tom.ru/o-nas/nashi-partnery/",
+    urlname: "https://aibolit70.ru/o-nas/nashi-partnery/",
     img: "uslugi1.jpg",
   },
 
@@ -129,7 +129,7 @@ subpages page About
     description: "Правовая информация. ООО 'Айболит'Детская медицинская служба",
     keywords:
       "герцена 68 стр 2 томск, врачи клиника айболит томск, правовая информация",
-    urlname: "https://aibolit.tom.ru/o-nas/pravovaya-informaciya/",
+    urlname: "https://aibolit70.ru/o-nas/pravovaya-informaciya/",
     img: "uslugi1.jpg",
   },
   {
@@ -137,7 +137,7 @@ subpages page About
     title: "Вакансии | Айболит",
     description: "Вакансии Айболит-детская медицинская служба",
     keywords: "вакансии педиатр",
-    urlname: "https://aibolit.tom.ru/o-nas/vacancies/",
+    urlname: "https://aibolit70.ru/o-nas/vacancies/",
     img: "uslugi1.jpg",
   },
   {
@@ -145,7 +145,7 @@ subpages page About
     title: "Карта сайта | Айболит",
     description: "Карта сайта Айболит-детская медицинская служба",
     keywords: "Карта сайта",
-    urlname: "https://aibolit.tom.ru/o-nas/map-site/",
+    urlname: "https://aibolit70.ru/o-nas/map-site/",
     img: "uslugi1.jpg",
   },
   /*
@@ -159,7 +159,7 @@ subpages page Doctors
       "Садовникова Елена Геннадьевна - педиатр, врач - аллерголог. Наблюдение детей на дому, врач на дом",
     keywords:
       "садовникова елена геннадьевна педиатр аллерголог, педиатр на дом томск, детский врач на дом, аллерголог на дом, вызов платного педиатра, программы наблюдения за ребенком",
-    urlname: "https://aibolit.tom.ru/doctors/sadovnikova-elena-gennadevna/",
+    urlname: "https://aibolit70.ru/doctors/sadovnikova-elena-gennadevna/",
     img: "Sadovnikova_Elena_Gennadevna.jpg",
   },
   {
@@ -170,7 +170,7 @@ subpages page Doctors
       "Петухова Ольга Викторовна - врач педиатр, гастроэнтеролог. Врач на дом. Программы наблюдение на дому. Анализы.",
     keywords:
       "педиатр на дом, гастроэнтеролог на дом томск, петухова ольга викторовна педиатр гастроэнтеролог, детский врач на дом, анализы на дому, патронаж новорожденных",
-    urlname: "https://aibolit.tom.ru/doctors/petuhova-olga-viktorovna/",
+    urlname: "https://aibolit70.ru/doctors/petuhova-olga-viktorovna/",
     img: "Petuhova_Olga_Viktorovna.jpg",
   },
   {
@@ -181,7 +181,7 @@ subpages page Doctors
       "Шевченко Анастасия Николаевна - педиатр, неонатолог. Врач на дом, наблюдение на дому. Анализы. Педиатр, неонатолог",
     keywords:
       "шевченко анастасия николаевна, вызов педиатра на дом томск, детский врач на дом, неонатолог томск, платный педиатр томск, патронаж новорожденного",
-    urlname: "https://aibolit.tom.ru/doctors/shevchenko-anastasiya-nikolaevna/",
+    urlname: "https://aibolit70.ru/doctors/shevchenko-anastasiya-nikolaevna/",
     img: "Shevchenko_Anastasiya_Nikolaevna.jpg",
   },
   {
@@ -192,7 +192,7 @@ subpages page Doctors
       "Остроухова Наталья Петровна - педиатр. Выезд педиатра на дом. Справка в школу. Патронаж новорожденного",
     keywords:
       "педиатр на дом, томск, детский врач на дом, анализы на дому, остроухова наталья петровна, вызов платного педиатра, патронаж новорожденных",
-    urlname: "https://aibolit.tom.ru/doctors/ostrouhova-natalya-petrovna/",
+    urlname: "https://aibolit70.ru/doctors/ostrouhova-natalya-petrovna/",
     img: "Ostrouhova_Natalya_Petrovna.jpg",
   },
   /*
@@ -208,7 +208,7 @@ subpages page Programs
     keywords:
       "вызов, педиатра на дом, Томск, программа, ведения, наблюдения, здоровье ребенка, анализы на дому, программы наблюдения за ребенком, платный педиатр, патронаж на дому новорожденных, патронаж новорожденного,  ребенка, невролог детский, патронаж детей на дому, хирург детский, окулист ,детский, аллерголог",
     urlname:
-      "https://aibolit.tom.ru/programmy-nablyudeniya-za-zdorovem/malysh-houm-standart-ot-0-do-2-h-le/",
+      "https://aibolit70.ru/programmy-nablyudeniya-za-zdorovem/malysh-houm-standart-ot-0-do-2-h-le/",
     img: "fibroma-u-rebenka.jpg",
   },
   {
@@ -221,7 +221,7 @@ subpages page Programs
     keywords:
       "вызов, педиатра на дом, Томск, программа, ведения, наблюдения, здоровье ребенка, анализы на дому, программы наблюдения за ребенком, платный педиатр, патронаж на дому новорожденных, патронаж новорожденного,  ребенка, невролог детский, патронаж детей на дому, хирург детский, окулист ,детский, аллерголог",
     urlname:
-      "https://aibolit.tom.ru/programmy-nablyudeniya-za-zdorovem/zdorovyj-rebenok-houm-standart-ot-2/",
+      "https://aibolit70.ru/programmy-nablyudeniya-za-zdorovem/zdorovyj-rebenok-houm-standart-ot-2/",
     img: "helmets-for-special-needs.jpg",
   },
   {
@@ -234,7 +234,7 @@ subpages page Programs
     keywords:
       "вызов, педиатра на дом, Томск, программа, ведения, наблюдения, здоровье ребенка, анализы на дому, программы наблюдения за ребенком, платный педиатр, патронаж на дому новорожденных, патронаж новорожденного,  ребенка, невролог детский, патронаж детей на дому, хирург детский, окулист ,детский, аллерголог",
     urlname:
-      "https://aibolit.tom.ru/programmy-nablyudeniya-za-zdorovem/zdorovyj-rebenok-houm-midi-ot-2-h-l/",
+      "https://aibolit70.ru/programmy-nablyudeniya-za-zdorovem/zdorovyj-rebenok-houm-midi-ot-2-h-l/",
     img: "detskii_vrach_rebenok.jpg",
   },
   /*
@@ -249,7 +249,7 @@ subpages page Uslugi
       "ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/uslugi-i-ceny/vyzov-pediatra-na-dom/",
+    urlname: "https://aibolit70.ru/uslugi-i-ceny/vyzov-pediatra-na-dom/",
     img: "uslugi1.jpg",
   },
   {
@@ -260,7 +260,7 @@ subpages page Uslugi
       "ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров.  ЗАБОР АНАЛИЗОВ НА ДОМУ. Педиатр – детский терапевт, наблюдающий ребенка с рождения.",
     keywords:
       "вызов педиатра, осмотр, консультация, врач педиатр, анализы, программы наблюдения, ребенок, новорожденный, платно, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/uslugi-i-ceny/pediatr/",
+    urlname: "https://aibolit70.ru/uslugi-i-ceny/pediatr/",
     img: "uslugi2.jpg",
   },
   {
@@ -271,8 +271,7 @@ subpages page Uslugi
       "Справка ребенку в Томске, Анализы на дому, Врач на дом, Анализы",
     keywords:
       "Томск, консультация, платная, на дом, вызов, педиатра, детский врач, анализы, справка ребенку в школу, лор, невролог, хирург, в сад, санаторно-куротная карта , окулист, аллерголог, патронаж новорожденного, программа наблюдения за здоровьем",
-    urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/",
+    urlname: "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/",
     img: "uslugi4.jpg",
   },
   /*
@@ -286,7 +285,7 @@ subpages page ForPatients
       "Стоимость услуг. Вызов педиатра на дом, детского врача (ЛОР, невролог, окулист, хирург). Анализы на дому. Программы наблюдения детей на дому. Патронаж новорожденных",
     keywords:
       "вызов, педиатр, детский врач, лор, невролог, хирург, анализы, программы наблюдения за здоровьем, ребенок, партронаж новорожденного, платно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/prices/",
+    urlname: "https://aibolit70.ru/pacientam/prices/",
     img: "uslugi4.jpg",
   },
   {
@@ -297,7 +296,7 @@ subpages page ForPatients
       "Лекарственное обеспечение. ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "Лекарственное обеспечение, вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/lekarstvennoe-obespechenie/",
+    urlname: "https://aibolit70.ru/pacientam/lekarstvennoe-obespechenie/",
     img: "uslugi4.jpg",
   },
   {
@@ -309,7 +308,7 @@ subpages page ForPatients
       "Правила подготовки к исследованиям. ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "Правила подготовки к исследованиям, вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/pravila-podgotovki/",
+    urlname: "https://aibolit70.ru/pacientam/pravila-podgotovki/",
     img: "uslugi4.jpg",
   },
   {
@@ -321,7 +320,7 @@ subpages page ForPatients
       "Сведения о специалистах, оказывающие платные медицинские услуги ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "Сведения о специалистах, оказывающие платные медицинские услуги, вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/svedeniya-o-specialistah/",
+    urlname: "https://aibolit70.ru/pacientam/svedeniya-o-specialistah/",
     img: "uslugi4.jpg",
   },
   {
@@ -332,7 +331,7 @@ subpages page ForPatients
       "Способы оплаты, оказывающие платные медицинские услуги ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "Способы оплаты, оказывающие платные медицинские услуги, вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/sposoby-oplaty/",
+    urlname: "https://aibolit70.ru/pacientam/sposoby-oplaty/",
     img: "uslugi4.jpg",
   },
   {
@@ -343,7 +342,7 @@ subpages page ForPatients
       "Налоговый вычет за лечение — это социальный налоговый вычет, который позволяет вернуть часть затрат на медицинские услуги, покупку лекарств.",
     keywords:
       "Как оформить налоговый вычет-это социальный налоговый вычет, который позволяет вернуть часть затрат на медицинские услуги, покупку лекарств",
-    urlname: "https://aibolit.tom.ru/pacientam/nalogovyj-vychet/",
+    urlname: "https://aibolit70.ru/pacientam/nalogovyj-vychet/",
     img: "uslugi4.jpg",
   },
   {
@@ -354,7 +353,7 @@ subpages page ForPatients
       "Отзывы, оказывающие платные медицинские услуги ВЫЗОВ ПЕДИАТРА на дом Томск. К вам приедет один из наших квалифицированных врачей педиатров. ВЫЗОВ УЗКОГО СПЕЦИАЛИСТА. Хирург, Невролог, Лор и другие. ЗАБОР АНАЛИЗОВ НА ДОМУ.",
     keywords:
       "Отзывы, оказывающие платные медицинские услуги, вызов, консультация, осмотр, педиатр, детский врач, платно, анализы, ребенок, новорожденный, цена, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/pacientam/otzyvy/",
+    urlname: "https://aibolit70.ru/pacientam/otzyvy/",
     img: "uslugi4.jpg",
   },
 
@@ -367,7 +366,7 @@ subpages page ForPatients
     keywords:
       "справка в детский лагерь, 079у, спрака в лагерь, педиатр на дом, томск",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-po-forme-079-u/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-po-forme-079-u/",
     img: "post5.jpg",
   },
   {
@@ -378,7 +377,7 @@ subpages page ForPatients
     keywords:
       "санаторно курортная карта, оформление санаторно курортной карты детям томск, анализы на дому",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/sanatorno-kurortnaya-karta-dlya-det/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/sanatorno-kurortnaya-karta-dlya-det/",
     img: "spravka1.jpg",
   },
   {
@@ -388,7 +387,7 @@ subpages page ForPatients
     keywords:
       "справка 026у, оформление, томск, справка, школа, сад, анализы, на дому",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-poforme-026-u/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-poforme-026-u/",
     img: "spravka1.jpg",
   },
   {
@@ -398,7 +397,7 @@ subpages page ForPatients
     keywords:
       "справка в бассейн ребенку, оформление спраки, бассейн, томск, ребенок, здоров",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-bassein/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-bassein/",
     img: "spravka3.jpg",
   },
   {
@@ -408,7 +407,7 @@ subpages page ForPatients
     keywords:
       "детский сад справка, ребенок, здоров, томск, дом, педиатр на дом, вызвать",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-detskii-sad/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-detskii-sad/",
     img: "spravka2.jpg",
   },
   {
@@ -417,7 +416,7 @@ subpages page ForPatients
     description: "Оформление справки в школу для ребенка| Айболи",
     keywords: "справка, школа, здоров, ребенок, томск, вызвать педиатра",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-shkolu/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-v-shkolu/",
     img: "deti6.jpg",
   },
   {
@@ -427,7 +426,7 @@ subpages page ForPatients
     keywords:
       "вызов педиатра на дом томск, выдать справка, здоров, ребенок, томск, школа, сад",
     urlname:
-      "https://aibolit.tom.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-o-sostoyanii-zdorovya-reben/",
+      "https://aibolit70.ru/uslugi-i-ceny/medicinskie-spravki-rebenku/spravka-o-sostoyanii-zdorovya-reben/",
     img: "helmets-for-special-needs.jpg",
   },
   /*
@@ -440,7 +439,7 @@ subpages page ForPatients
       "Педиатрический Check-up на дому. Ознакомьтесь с программами клиник 'Айболит'",
     keywords:
       "плановый осмотр, ребенка, в месяц, год, три месяца, 6 месяцев, медосмотр, комплексный медицинский осмотр, новорожденного",
-    urlname: "https://aibolit.tom.ru/chek-ap/",
+    urlname: "https://aibolit70.ru/chek-ap/",
     img: "post1-2.jpg",
   },
   /*
@@ -453,7 +452,7 @@ subpages page ForPatients
     description:
       "Детский врач-невролог занимается диагностикой, лечением и профилактикой заболеваний, функциональных нарушений и аномалий развития периферической (нервные волокна) и центральной нервной системы (головной и спинной мозг) ребенка.",
     keywords: "вызов невролога на дом, детский томск, платный, консультация ",
-    urlname: "https://aibolit.tom.ru/blog/detskij-nevrolog-na-dom/",
+    urlname: "https://aibolit70.ru/blog/detskij-nevrolog-na-dom/",
     img: "post1-2.jpg",
   },
   {
@@ -463,7 +462,7 @@ subpages page ForPatients
     description:
       "Вакцинация детей в возрасте до 18 лет, согласно действующему национальному календарю профилактических прививок и календарю профилактических прививок по эпидпоказаниям",
     keywords: "вакцинация, ребенка, новорожденного, прививки, Томск, на дом ",
-    urlname: "https://aibolit.tom.ru/blog/kalendar-vakcinacija/",
+    urlname: "https://aibolit70.ru/blog/kalendar-vakcinacija/",
     img: "kalendar_vakcinaci.jpg",
   },
   {
@@ -475,7 +474,7 @@ subpages page ForPatients
       "Хирург занимается диагностикой, и лечением заболеваний, пороков и аномалий развития, требующих оперативного хирургического вмешательства,  у детей и подростков.",
     keywords:
       "вызов хирурга на дом, платный, детский хирург, томск, узкие специалисты на дом",
-    urlname: "https://aibolit.tom.ru/blog/detskij-hirurg-na-dom/",
+    urlname: "https://aibolit70.ru/blog/detskij-hirurg-na-dom/",
     img: "uslugi1.jpg",
   },
   {
@@ -486,7 +485,7 @@ subpages page ForPatients
       "Патронаж новорожденных в Айболит медицинской службе – это внимательное, доброжелательное отношение, высокий профессионализм врачей, индивидуальный подход к каждому ребенку.",
     keywords:
       "вызывать педиатра, патронаж, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/patronaj-novorojdennogo/",
+    urlname: "https://aibolit70.ru/blog/patronaj-novorojdennogo/",
     img: "post1.jpg",
   },
   {
@@ -496,7 +495,7 @@ subpages page ForPatients
     description:
       "Стоит ли отдавать ребенка в детский сад? В какой момент лучше начинать ходить сад? И как помочь ребенку в адаптации в детском саду?",
     keywords: "вызывать педиатра на дом, Томск, адаптация в детском саду",
-    urlname: "https://aibolit.tom.ru/blog/adaptaciya-k-detskomu-sadu/",
+    urlname: "https://aibolit70.ru/blog/adaptaciya-k-detskomu-sadu/",
     img: "post5.jpg",
   },
   {
@@ -508,7 +507,7 @@ subpages page ForPatients
       "Солнечный и тепловой удар у детей – понятия сходные. Особую группу риска составляют малыши от 0 до 3х лет, ведь их организм еще не умеет в должной степени регулировать температуру.",
     keywords:
       "вызывать педиатра на дом, Томск, Как помочь ребенку перенести жару",
-    urlname: "https://aibolit.tom.ru/blog/kak-pomoch-rebenku-perenesti-jaru/",
+    urlname: "https://aibolit70.ru/blog/kak-pomoch-rebenku-perenesti-jaru/",
     img: "post6-1.jpg",
   },
   {
@@ -519,7 +518,7 @@ subpages page ForPatients
       "Наши врачи-специалисты оказывают на дому квалифицированную медицинскую помощь, обеспечивая высочайший уровень диагностики,лечения, сопровождения и реабилитации наших маленьких пациентов.",
     keywords:
       "вызывать лор на дом, Томск, отоларинголог детский , лор детский, на дом, врач ребенку ",
-    urlname: "https://aibolit.tom.ru/blog/detskii-lor-vrach-na-dom/",
+    urlname: "https://aibolit70.ru/blog/detskii-lor-vrach-na-dom/",
     img: "post7-1.jpg",
   },
   {
@@ -530,7 +529,7 @@ subpages page ForPatients
       "Мы предоставляем возможность получения квалифицированной медицинской помощи на дому,обеспечивая высочайший уровень диагностики, лечения, сопровождения наших маленьких пациентов и поддержку их семей",
     keywords:
       "вызов педиатра, патронаж, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/vizov-pediatra-na-dom/",
+    urlname: "https://aibolit70.ru/blog/vizov-pediatra-na-dom/",
     img: "massage.jpg",
   },
   {
@@ -542,7 +541,7 @@ subpages page ForPatients
       "«ПЕНТАКСИМ» — прививка от дифтерии, столбняка, коклюша, полиомиелита",
     keywords:
       "вызов педиатра, патронаж новорожденного, вакцинация, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/pentaksim/",
+    urlname: "https://aibolit70.ru/blog/pentaksim/",
     img: "detskii_vrach_rebenok.jpg",
   },
   {
@@ -552,7 +551,7 @@ subpages page ForPatients
       "Скрининговые медицинские осмотры детей – основа профилактического направления педиатрии.",
     keywords:
       "вызов педиатра, патронаж новорожденного, медосмотры для детей, медицинский осмотр ребенка,вакцинация, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/kompleksnyj-osmotr-rebenka-na-domu/",
+    urlname: "https://aibolit70.ru/blog/kompleksnyj-osmotr-rebenka-na-domu/",
     img: "reklama-3.jpg",
   },
   {
@@ -562,7 +561,7 @@ subpages page ForPatients
       "Аллергия у детей — это неадекватная реакция иммунной системы на безвредные для большинства вещества.",
     keywords:
       "вызов педиатра, аллерголога, аллергия,  патронаж новорожденного, медосмотры для детей, медицинский осмотр ребенка,вакцинация, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/sovetov-vracha-allergologa/",
+    urlname: "https://aibolit70.ru/blog/sovetov-vracha-allergologa/",
     img: "pentaksim.jpg",
   },
   {
@@ -572,7 +571,7 @@ subpages page ForPatients
       "С приходом весны и яркого солнца многие дети начинают испытывать неприятные ощущения: зуд и покраснение глаз, заложенность носа,",
     keywords:
       "вызов педиатра,аллерголог,патронаж новорожденного, медосмотры для детей, медицинский осмотр ребенка,вакцинация, программы наблюдения, здоровье, ребенка, новорожденного, палатно, на дом, Томск",
-    urlname: "https://aibolit.tom.ru/blog/vnimanie-pollinoz/",
+    urlname: "https://aibolit70.ru/blog/vnimanie-pollinoz/",
     img: "deti7.jpg",
   },
 ];

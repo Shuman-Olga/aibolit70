@@ -124,7 +124,7 @@ export default function Programs() {
                   с законодательством Российской Федерации, согласно инструкциям
                   по применению.&nbsp;
                   <a
-                    href="https://aibolit.tom.ru/blog/kalendar-vakcinacija/"
+                    href="https://aibolit70.ru/blog/kalendar-vakcinacija/"
                     target="_blank"
                     rel="noreferrer">
                     Национальный календарь профилактических прививок
