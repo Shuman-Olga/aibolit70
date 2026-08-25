@@ -14,9 +14,8 @@ const plugins = [
 module.exports = merge(common, {
   mode: "production",
   plugins,
-  devtool: "source-map",
+  devtool: false,
   output: {
-    filename: "js/[name].[contenthash].js",
     chunkFilename: "js/[name].[contenthash].chunk.js",
   },
   module: {

@@ -5,7 +5,6 @@ const common = require("./common.js");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const plugins = [
-  ,
   new ReactRefreshWebpackPlugin(),
   new webpack.HotModuleReplacementPlugin(),
 ];
