@@ -29,9 +29,10 @@ const plugins = [
       path.basename(htmlPlugin.options.filename) === "index.html",
     favicons: {
       icons: {
-        appleIcon: true, // Apple touch icons.
-        android: true, // Android homescreen icon.
-        favicons: true, // Regular favicons.
+        favicons: true,
+        appleIcon: true,
+        appleStartup: false,
+        android: true,
       },
     },
     cache: {
