@@ -30,36 +30,43 @@
   <script>
     window.addEventListener('load', function () {
 
+      const isReactSnap =
+        typeof navigator !== "undefined" &&
+        /ReactSnap/i.test(navigator.userAgent);
+
       // Yandex Metrika
-      (function (m, e, t, r, i, k, a) {
-        m[i] = m[i] || function () {
-          (m[i].a = m[i].a || []).push(arguments);
-        };
-        m[i].l = 1 * new Date();
-        k = e.createElement(t);
-        a = e.getElementsByTagName(t)[0];
-        k.async = 1;
-        k.src = r;
-        a.parentNode.insertBefore(k, a);
-      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      if (!isReactSnap) {
+        (function (m, e, t, r, i, k, a) {
+          m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+          m[i].l = 1 * new Date();
+          k = e.createElement(t);
+          a = e.getElementsByTagName(t)[0];
+          k.async = 1;
+          k.src = r;
+          a.parentNode.insertBefore(k, a);
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-      ym(92081905, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
+        ym(92081905, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+        });
 
-      // Google Analytics
-      const script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-BW69R82Z9V";
-      script.async = true;
-      document.head.appendChild(script);
+        // Google Analytics
+        const script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-BW69R82Z9V";
+        script.async = true;
+        document.head.appendChild(script);
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-BW69R82Z9V');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BW69R82Z9V');
+      }
+
 
     });
   </script>

@@ -27,7 +27,7 @@ export default function ModalCallback() {
   };
 
   const onSubmit = async (data) => {
-    console.log(errors, isSubmitSuccessful);
+    // console.log(errors, isSubmitSuccessful);
     await emailjs
       .send("service_3v0hnkn", "template_9mfgw27", data, "PhUOVu-NXcTpMJR7t")
       .then((response) => {
@@ -40,7 +40,7 @@ export default function ModalCallback() {
         }, 2000);
       })
       .catch((err) => {
-        console.log("Упс! Ошибочка...", err);
+        // console.log("Упс! Ошибочка...", err);
       });
   };
 

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { withSlash } from "../../data/constans";
 
 export default function MapSubMenu({ submenus }) {
-  console.log(submenus, submenus.path);
+  // console.log(submenus, submenus.path);
   return (
     <ul>
       {submenus.children

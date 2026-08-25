@@ -18,7 +18,7 @@ export default function SearchPage() {
     );
     setResultsearch(result);
   }
-  console.log(search);
+  // console.log(search);
   useEffect(() => {
     const result = dataSeo.filter((item) =>
       item.title.toLowerCase().includes(search),

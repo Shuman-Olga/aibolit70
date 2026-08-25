@@ -19,7 +19,7 @@ export default function FormCallingDoctor() {
   } = useForm({ resolver: yupResolver(validationSchema) });
 
   const onSubmit = async (data) => {
-    console.log(errors, isSubmitSuccessful);
+    // console.log(errors, isSubmitSuccessful);
     await emailjs
       .send("service_3v0hnkn", "template_ooahi3b", data, "PhUOVu-NXcTpMJR7t")
       .then((response) => {
@@ -32,7 +32,7 @@ export default function FormCallingDoctor() {
         }, 2000);
       })
       .catch((err) => {
-        console.log("Упс! Ошибочка...", err);
+        // console.log("Упс! Ошибочка...", err);
       });
   };
 

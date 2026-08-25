@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import ModalWindows from "../modal/Modal";
 import FormCallingDoctor from "../modal/FormСalling";
+import isReactSnap from "../../utilits/isReactSnap";
 
 export default function BlockContacts() {
   return (
@@ -127,14 +128,16 @@ export default function BlockContacts() {
               }}>
               Патронажная служба в Томске
             </a>
-            <iframe
-              title="map"
-              src="https://yandex.ru/map-widget/v1/org/aybolit_detskaya_meditsinskaya_sluzhba/1788754562/?ll=84.982875%2C56.474215&z=15"
-              width="560"
-              height="400"
-              allowFullScreen
-              loading="lazy"
-              style={{ position: "relative" }}></iframe>
+            {!isReactSnap && (
+              <iframe
+                title="map"
+                src="https://yandex.ru/map-widget/v1/org/aybolit_detskaya_meditsinskaya_sluzhba/1788754562/?ll=84.982875%2C56.474215&z=15"
+                width="560"
+                height="400"
+                allowFullScreen
+                loading="lazy"
+                style={{ position: "relative" }}></iframe>
+            )}
           </div>
         </div>
       </div>
