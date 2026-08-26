@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavZdorove() {
   return (
@@ -18,27 +19,15 @@ export default function SpravkavZdorove() {
         <div className="mt-4">
           <div className="d-flex my-4 block-foto">
             <div className="me-4">
-              <picture>
-                <source
-                  srcSet={require("../../../assets/img/helmets-for-special-needs.avif")}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require("../../../assets/img/helmets-for-special-needs.webp")}
-                  type="image/webp"
-                />
-                <img
-                  className="size-img me-4"
-                  src={require(
-                    `../../../assets/img/helmets-for-special-needs.jpg`,
-                  )}
-                  alt="spravka-o-sostoyanii-zdorovya-reben"
-                  title="Справка о состоянии здоровья ребенка"
-                  loading="lazy"
-                  width={252}
-                  height={180}
-                />
-              </picture>
+              <OptimizedImage
+                className="size-img me-4"
+                src={"helmets-for-special-needs.jpg"}
+                alt="spravka-o-sostoyanii-zdorovya-reben"
+                title="Справка о состоянии здоровья ребенка"
+                loading="lazy"
+                width={252}
+                height={180}
+              />
             </div>
             <div>
               <p>

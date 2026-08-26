@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function MedicinskayaSpravka079u() {
   return (
@@ -16,25 +17,15 @@ export default function MedicinskayaSpravka079u() {
       <Container>
         <BlockReklama3 />
         <div className="mt-4 block-foto">
-          <picture>
-            <source
-              srcSet={require("../../../assets/img/post5.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../../assets/img/post5.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../../assets/img/post5.jpg`)}
-              alt="deti"
-              title="Медицинская справка 079/у в детский лагерь"
-              loading="lazy"
-              width={252}
-              height={201}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post5.jpg"}
+            alt="deti"
+            title="Медицинская справка 079/у в детский лагерь"
+            loading="lazy"
+            width={252}
+            height={201}
+          />
 
           <p>
             Ваш ребенок едет на отдых в детский оздоровительный лагерь? Здорово!

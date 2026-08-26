@@ -1,6 +1,7 @@
 import { Container, Nav } from "react-bootstrap";
 
 import { NavLink } from "react-router-dom";
+import OptimizedImage from "./common/OptimizedImage";
 
 export default function Footer() {
   return (
@@ -67,25 +68,15 @@ export default function Footer() {
         </Nav>
       </div>
       <div className="text-center">
-        <picture>
-          <source
-            srcSet={require("../assets/img/aibolit_logo.avif")}
-            type="image/avif"
-          />
-          <source
-            srcSet={require("../assets/img/aibolit_logo.webp")}
-            type="image/webp"
-          />
-          <img
-            src={require("../assets/img/aibolit_logo.png")}
-            loading="lazy"
-            alt="logo"
-            className="w-25 img mb-4"
-            title="logo"
-            width={188}
-            height={61}
-          />
-        </picture>
+        <OptimizedImage
+          src={"aibolit_logo.png"}
+          loading="lazy"
+          alt="logo"
+          className="w-25 img mb-4"
+          title="logo"
+          width={188}
+          height={61}
+        />
 
         <div className=" block-colum d-flex justify-content-between align-items-center ">
           <div>

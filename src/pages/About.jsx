@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import BlockAdvantages from "../components/home/BlockAdvantages";
 import SeoPage from "../components/Seo";
+import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function About() {
   return (
@@ -14,25 +15,15 @@ export default function About() {
       </div>
       <Container>
         <div className="d-flex justify-content-center mt-5">
-          <picture>
-            <source
-              srcSet={require("../assets/img/massage.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../assets/img/massage.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../assets/img/massage.jpg`)}
-              loading="lazy"
-              width={700}
-              height={467}
-              alt="foto-aibolot"
-              className="foto"
-              title="foto"
-            />
-          </picture>
+          <OptimizedImage
+            src={"massage.jpg"}
+            loading="lazy"
+            width={700}
+            height={467}
+            alt="foto-aibolot"
+            className="foto"
+            title="foto"
+          />
         </div>
         <div className="text mt-4">
           <p className="text-about">

@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function BlockReklama1() {
   return (
@@ -7,25 +8,15 @@ export default function BlockReklama1() {
       id="blockreklamaone"
       className="d-flex justify-content-center my-5">
       <div className="block-reklama d-flex">
-        <picture>
-          <source
-            srcSet={require("../../assets/img/reklama.avif")}
-            type="image/avif"
-          />
-          <source
-            srcSet={require("../../assets/img/reklama.webp")}
-            type="image/webp"
-          />
-          <img
-            src={require(`../../assets/img/reklama.png`)}
-            alt="img-reklama "
-            title="reklama"
-            loading="lazy"
-            width={438}
-            height={205}
-            style={{ width: "100%", height: "auto" }}
-          />
-        </picture>
+        <OptimizedImage
+          src={"reklama.png"}
+          alt="img-reklama "
+          title="reklama"
+          loading="lazy"
+          width={438}
+          height={205}
+          // style={{ width: "100%", height: "auto" }}
+        />
 
         <div className="blockback text-center px-5 py-3">
           <p>Медицинские документы</p>

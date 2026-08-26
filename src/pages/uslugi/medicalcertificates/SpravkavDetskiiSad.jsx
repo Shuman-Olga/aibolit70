@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavDetskiiSad() {
   return (
@@ -16,25 +17,15 @@ export default function SpravkavDetskiiSad() {
       <Container>
         <BlockReklama3 />
         <div className=" block-foto">
-          <picture>
-            <source
-              srcSet={require("../../../assets/img/spravka2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../../assets/img/spravka2.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../../assets/img/spravka2.jpg`)}
-              alt="deti-sad"
-              title="Справка в детский сад"
-              loading="lazy"
-              width={252}
-              height={300}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"spravka2.jpg"}
+            alt="deti-sad"
+            title="Справка в детский сад"
+            loading="lazy"
+            width={252}
+            height={300}
+          />
 
           <p>
             Для поступления в детский сад и в процессе обучения могут

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function BlockInfo() {
   return (
@@ -7,25 +8,15 @@ export default function BlockInfo() {
       <Container>
         <h1 className="h1-font">Айболит-детская медицинская служба В Томске</h1>
         <div className="d-flex justify-content-around">
-          <picture>
-            <source
-              srcSet={require("../../assets/img/foto_1000w.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/foto_1000w.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require("../../assets/img/foto_1000w.jpg")}
-              alt="foto"
-              width="650"
-              height="550"
-              loading="lazy"
-              title="foto"
-              className="img-foto me-3"
-            />
-          </picture>
+          <OptimizedImage
+            src={"foto_1000w.jpg"}
+            alt="foto"
+            width={650}
+            height={550}
+            loading="lazy"
+            title="foto"
+            className="img-foto me-3"
+          />
 
           <div className="w-50 text-md-start fst-italic fs-5">
             <div className="width-svg">

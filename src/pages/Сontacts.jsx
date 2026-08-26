@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import isReactSnap from "../utilits/isReactSnap";
 import SeoPage from "../components/Seo";
+import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function Contacts() {
   return (
@@ -51,24 +52,16 @@ export default function Contacts() {
         </div>
         <div className="text-center mt-5 fs-6">
           <h3 className="fs-4">
-            <picture>
-              <source
-                srcSet={require("../assets/img/time.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../assets/img/time.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../assets/img/time.png`)}
-                alt="clock"
-                className="clock-png"
-                title="Режим работы Айболит"
-                loading="eager"
-                decoding="async"
-              />
-            </picture>
+            <OptimizedImage
+              src={"time.png"}
+              alt="clock"
+              className="clock-png"
+              title="Режим работы Айболит"
+              loading="eager"
+              decoding="async"
+              width={40}
+              height={40}
+            />
             Режим работы детской медицинской слжбы "Айболит"
           </h3>
           <div className="d-flex justify-content-center">
@@ -130,25 +123,15 @@ export default function Contacts() {
             <span className="fw-bold">Как проехать:</span>
           </p>
           <p>
-            <picture>
-              <source
-                srcSet={require("../assets/img/auto.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../assets/img/auto.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../assets/img/auto.png`)}
-                alt="auto-png"
-                className="auto-png"
-                title="Ближайшие остановки общественного транспорта"
-                loading="lazy"
-                width={40}
-                height={40}
-              />
-            </picture>
+            <OptimizedImage
+              src={"auto.png"}
+              alt="auto-png"
+              className="auto-png"
+              title="Ближайшие остановки общественного транспорта"
+              loading="lazy"
+              width={40}
+              height={40}
+            />
             Ближайшие остановки общественного транспорта:
           </p>
           <ul>
@@ -169,25 +152,15 @@ export default function Contacts() {
           </ul>
           <p>
             <br />
-            <picture>
-              <source
-                srcSet={require("../assets/img/door.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../assets/img/door.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../assets/img/door.png`)}
-                alt="door-png"
-                className="door-img"
-                title="вход"
-                loading="lazy"
-                width={40}
-                height={40}
-              />
-            </picture>
+            <OptimizedImage
+              src={"door.png"}
+              alt="door-png"
+              className="door-img"
+              title="вход"
+              loading="lazy"
+              width={40}
+              height={40}
+            />
             Торговый центр Extra, вход с торца через "ТомОко", 3 этаж. <br />
             Возле Extra есть парковка.
           </p>

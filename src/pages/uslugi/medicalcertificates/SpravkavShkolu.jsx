@@ -4,6 +4,7 @@ import BlockReklama1 from "../../../components/reklama/BlockReklama1";
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavShkolu() {
   return (
@@ -108,25 +109,15 @@ export default function SpravkavShkolu() {
           <h5>Медсправка для школы по болезни </h5>
           <div className="d-flex my-4 block-foto">
             <div className="me-4">
-              <picture>
-                <source
-                  srcSet={require("../../../assets/img/deti6.avif")}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require("../../../assets/img/deti6.webp")}
-                  type="image/webp"
-                />
-                <img
-                  className="size-img"
-                  src={require(`../../../assets/img/deti6.jpg`)}
-                  alt="spravka-v-shkolu"
-                  title="Медсправка для школы по болезни"
-                  loading="lazy"
-                  width={252}
-                  height={338}
-                />
-              </picture>
+              <OptimizedImage
+                className="size-img"
+                src={"deti6.jpg"}
+                alt="spravka-v-shkolu"
+                title="Медсправка для школы по болезни"
+                loading="lazy"
+                width={252}
+                height={338}
+              />
             </div>
             <div>
               <p>

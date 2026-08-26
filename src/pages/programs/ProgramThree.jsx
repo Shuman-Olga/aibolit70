@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama from "../../components/reklama/BlockReklama1";
 import SeoPage from "../../components/Seo";
 import PDFItem from "../../components/PDFItem";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function ProgramThree() {
   return (
@@ -16,25 +17,15 @@ export default function ProgramThree() {
       </div>
       <Container className="my-4 text-center">
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/detskii_vrach_rebenok.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/detskii_vrach_rebenok.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/detskii_vrach_rebenok.jpg`)}
-              alt="img-program-three"
-              className="progthree-img"
-              title="Здоровый ребенок Педиатр рядом ( c 2-х лет)"
-              loading="lazy"
-              width={576}
-              height={411}
-            />
-          </picture>
+          <OptimizedImage
+            src={"detskii_vrach_rebenok.jpg"}
+            alt="img-program-three"
+            className="progthree-img"
+            title="Здоровый ребенок Педиатр рядом ( c 2-х лет)"
+            loading="lazy"
+            width={576}
+            height={411}
+          />
 
           <div className="lh-lg py-4">
             <p className="text-center">

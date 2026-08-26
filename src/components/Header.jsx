@@ -1,48 +1,27 @@
 import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import logoAvif from "../assets/img/aibolit_logo.avif";
-import logoWebp from "../assets/img/aibolit_logo.webp";
-import logoPng from "../assets/img/aibolit_logo.png";
-
 import ModalWindows from "./modal/Modal";
 import Navbar from "./navigations/Navbar";
 import FormCallingDoctor from "./modal/FormСalling";
+import OptimizedImage from "./common/OptimizedImage";
 
 export default function Header() {
   return (
     <Container fluid id="header" className="sticky-top">
       <div className="header-colum container my-3 d-flex align-items-center justify-content-around">
         <div className="block-logo">
-          <NavLink
-            to="/"
-            className="navbar-brand"
-            // target="_top"
-            // rel="noopener noreferrer"
-          >
-            <picture>
-              {/* <source
-                srcSet={require("../assets/img/aibolit_logo.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../assets/img/aibolit_logo.webp")}
-                type="image/webp"
-              /> */}
-              <source srcSet={logoAvif} type="image/avif" />
-              <source srcSet={logoWebp} type="image/webp" />
-              <img
-                // src={require("../assets/img/aibolit_logo.png")}
-                src={logoPng}
-                alt="logo-aibolit"
-                className="img-fluid img-logo"
-                title="logo-aibolit"
-                loading="eager"
-                decoding="async"
-                width={252}
-                height={82}
-              />
-            </picture>
+          <NavLink to="/" className="navbar-brand">
+            <OptimizedImage
+              src={"aibolit_logo.png"}
+              alt="logo-aibolit"
+              className="img-fluid img-logo"
+              title="logo-aibolit"
+              loading="eager"
+              decoding="async"
+              width={252}
+              height={82}
+            />
           </NavLink>
           <p className="address">г. Томск, ул. Герцена 68, строение 2</p>
         </div>

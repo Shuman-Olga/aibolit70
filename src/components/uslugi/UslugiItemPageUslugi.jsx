@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { dataUslugi } from "../../data/dataUslugi";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function UslugiItems() {
   return (
@@ -19,24 +20,14 @@ export default function UslugiItems() {
 
             <div className="d-flex block-foto">
               <div>
-                <picture>
-                  <source
-                    srcSet={require(`../../assets/img/${item.img}.avif`)}
-                    type="image/avif"
-                  />
-                  <source
-                    srcSet={require(`../../assets/img/${item.img}.webp`)}
-                    type="image/webp"
-                  />
-                  <img
-                    src={require(`../../assets/img/${item.img}.jpg`)}
-                    alt="foto-doctor"
-                    title={item.title}
-                    width="190"
-                    height="160"
-                    loading="lazy"
-                  />
-                </picture>
+                <OptimizedImage
+                  src={`${item.img}.jpg`}
+                  alt="foto-doctor"
+                  title={item.title}
+                  width={190}
+                  height={160}
+                  loading="lazy"
+                />
               </div>
               <div className="p-3">
                 <p>{item.description}</p>

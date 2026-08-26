@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { dataProgramItem } from "../../data/dataProgramItem";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function ProgramItem() {
   return (
@@ -40,24 +41,14 @@ export default function ProgramItem() {
               ))}
             </div>
             <div>
-              <picture>
-                <source
-                  srcSet={require(`../../assets/img/${item.img}.avif`)}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require(`../../assets/img/${item.img}.webp`)}
-                  type="image/webp"
-                />
-                <img
-                  src={require(`../../assets/img/${item.img}.jpg`)}
-                  alt="img"
-                  title="Малыш Хоум. Стандарт"
-                  loading="lazy"
-                  width={576}
-                  height={410}
-                />
-              </picture>
+              <OptimizedImage
+                src={`${item.img}.jpg`}
+                alt="img"
+                title="Малыш Хоум. Стандарт"
+                loading="lazy"
+                width={576}
+                height={410}
+              />
             </div>
           </div>
         </NavLink>

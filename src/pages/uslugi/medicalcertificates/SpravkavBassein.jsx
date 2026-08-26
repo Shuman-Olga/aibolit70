@@ -5,6 +5,7 @@ import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavBassein() {
   return (
@@ -18,25 +19,15 @@ export default function SpravkavBassein() {
       <Container>
         <BlockReklama3 />
         <div className="me-4">
-          <picture>
-            <source
-              srcSet={require("../../../assets/img/spravka3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../../assets/img/spravka3.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../../assets/img/spravka3.jpg`)}
-              alt="rebenok-bassein"
-              title="rebenok-bassein"
-              loading="lazy"
-              width={252}
-              height={256}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"spravka3.jpg"}
+            alt="rebenok-bassein"
+            title="rebenok-bassein"
+            loading="lazy"
+            width={252}
+            height={256}
+          />
 
           <p>
             Для посещения общественных плавательных, оздоровительных или

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama1 from "../components/reklama/BlockReklama1";
 import SeoPage from "../components/Seo";
 import ProgramItem from "../components/programs/ProgramItemPagePrograms";
+import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function Programs() {
   return (
@@ -15,25 +16,15 @@ export default function Programs() {
       </div>
       <Container className="my-4">
         <div>
-          <picture>
-            <source
-              srcSet={require("../assets/img/massage.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../assets/img/massage.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../assets/img/massage.jpg`)}
-              alt="foto-aibolit"
-              className="foto"
-              title="Программы наблюдения за здоровьем ребенка"
-              loading="lazy"
-              width={420}
-              height={280}
-            />
-          </picture>
+          <OptimizedImage
+            src={"massage.jpg"}
+            alt="foto-aibolit"
+            className="foto"
+            title="Программы наблюдения за здоровьем ребенка"
+            loading="lazy"
+            width={420}
+            height={280}
+          />
 
           <p className="px-3">
             <span className="fw-bold">

@@ -1,6 +1,8 @@
 import { Container } from "react-bootstrap";
 import React from "react";
 
+import SeoPage from "../components/Seo";
+
 const BlockImg = React.lazy(() => import("../components/home/BlockImg"));
 const BlockInfo = React.lazy(() => import("../components/home/BlockInfo"));
 const BlockAdvantages = React.lazy(
@@ -13,7 +15,6 @@ const BlockContacts = React.lazy(
   () => import("../components/home/BlockContacts"),
 );
 
-import SeoPage from "../components/Seo";
 // import Banner from "../components/home/Banner";
 // import WorkOnHolidays from "../components/home/WorkOnHolidays";
 

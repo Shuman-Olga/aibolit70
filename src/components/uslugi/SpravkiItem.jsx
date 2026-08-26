@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { dataSpravki } from "../../data/dataSpravkiItem";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function SpravkiItem() {
   return (
@@ -19,24 +20,14 @@ export default function SpravkiItem() {
 
             <div className="d-flex block-foto">
               <div>
-                <picture>
-                  <source
-                    srcSet={require(`../../assets/img/${item.img}.avif`)}
-                    type="image/avif"
-                  />
-                  <source
-                    srcSet={require(`../../assets/img/${item.img}.webp`)}
-                    type="image/webp"
-                  />
-                  <img
-                    src={require(`../../assets/img/${item.img}.png`)}
-                    alt="foto"
-                    title={item.title}
-                    loading="lazy"
-                    width={180}
-                    height={161}
-                  />
-                </picture>
+                <OptimizedImage
+                  src={`${item.img}.png`}
+                  alt="foto"
+                  title={item.title}
+                  loading="lazy"
+                  width={180}
+                  height={161}
+                />
               </div>
               <div className="p-3">
                 <p>{item.description}</p>

@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function Banner() {
   return (
@@ -6,11 +7,18 @@ export default function Banner() {
       <h2 className="h2-banner ">Наши новости</h2>
       <hr className="w-50" />
       <div className="d-flex ">
-        <img
+        <OptimizedImage
+          src={"photo_2025-02-25_22-24-(03).jpg"}
+          alt="img-background"
+          loading="lazy"
+          width={300}
+          height={328}
+        />
+        {/* <img
           src={require("../../assets/img/photo_2025-02-25_22-24-03.jpg")}
           alt="img-background"
           className="w-50 rounded float-start"
-        />
+        /> */}
         <div className="ms-5">
           <h3> Дорогие будущие мамы!🌷</h3>
           <p>
@@ -22,8 +30,7 @@ export default function Banner() {
             Погрузитесь в уникальный авторский курс
             <a
               href=" https://app.leadteh.ru/w/deZRb"
-              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-            >
+              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
               {" "}
               "Твои Не Идеальные Роды"{" "}
             </a>{" "}
@@ -56,8 +63,7 @@ export default function Banner() {
             путешествия в мир материнства. Записывайтесь на курс
             <a
               href=" https://app.leadteh.ru/w/deZRb"
-              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-            >
+              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
               {" "}
               "Твои Не Идеальные Роды"{" "}
             </a>{" "}
@@ -68,8 +74,7 @@ export default function Banner() {
             👣 Записаться можно по ссылке{" "}
             <a
               href=" https://app.leadteh.ru/w/deZRb"
-              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-            >
+              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
               https://app.leadteh.ru/w/deZRb
             </a>
           </p>

@@ -3,6 +3,7 @@ import { Container, Tab, Tabs } from "react-bootstrap";
 import BlockReklama1 from "../../components/reklama/BlockReklama1";
 import SeoPage from "../../components/Seo";
 import PDFItem from "../../components/PDFItem";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function ProgramOne() {
   return (
@@ -15,25 +16,15 @@ export default function ProgramOne() {
       </div>
       <Container className="my-4 text-center">
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/uslugi1.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/uslugi1.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/uslugi1.jpg`)}
-              alt="img-program-one"
-              className="progone-img"
-              title="Программа Мылыш.Хоум | Айболит детская медицинская служба"
-              loading="lazy"
-              width={468}
-              height={400}
-            />
-          </picture>
+          <OptimizedImage
+            src={"uslugi1.jpg"}
+            alt="img-program-one"
+            className="progone-img"
+            title="Программа Мылыш.Хоум | Айболит детская медицинская служба"
+            loading="lazy"
+            width={468}
+            height={400}
+          />
 
           <div className="lh-lg py-4">
             <p>

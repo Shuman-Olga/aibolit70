@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama1 from "../../../components/reklama/BlockReklama1";
 import BlockReklama2 from "../../../components/reklama/BlockReklama2";
 import SeoPage from "../../../components/Seo";
+import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SanatornoKurortnayaKarta() {
   return (
@@ -16,25 +17,15 @@ export default function SanatornoKurortnayaKarta() {
       <Container id="santornokurortnyakarta">
         <Container>
           <div className="mt-4 block-info">
-            <picture>
-              <source
-                srcSet={require("../../../assets/img/spravka1.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../../assets/img/spravka1.webp")}
-                type="image/webp"
-              />
-              <img
-                className="size-img"
-                src={require(`../../../assets/img/spravka1.jpg`)}
-                alt="img"
-                title="img"
-                loading="lazy"
-                width={252}
-                height={258}
-              />
-            </picture>
+            <OptimizedImage
+              className="size-img"
+              src={"spravka1.jpg"}
+              alt="img"
+              title="img"
+              loading="lazy"
+              width={252}
+              height={258}
+            />
 
             <p>
               Детская санаторно-курортная карта (форма №076/у-04) действительна

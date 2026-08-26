@@ -2,32 +2,23 @@ import { Link, NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import ModalWindows from "../modal/Modal";
 import FormCallingDoctor from "../modal/FormСalling";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function BlockImg() {
   return (
     <Container id="blockimg" className="">
       <div className="position-relative position-img">
-        <picture>
-          <source
-            srcSet={require("../../assets/img/img-home.avif")}
-            type="image/avif"
-          />
-          <source
-            srcSet={require("../../assets/img/img-home.webp")}
-            type="image/webp"
-          />
-          <img
-            src={require("../../assets/img/img-home.jpg")}
-            alt="img-background"
-            className="img-background"
-            loading="eager"
-            width={1800}
-            height={630}
-            style={{ width: "100%", height: "auto" }}
-            decoding="async"
-            title="foto"
-          />
-        </picture>
+        <OptimizedImage
+          src={"img-home.jpg"}
+          alt="img-background"
+          className="img-background"
+          loading="eager"
+          width={"100%"}
+          height={"auto"}
+          // style={{ width: "100%", height: "auto" }}
+          decoding="async"
+          title="foto"
+        />
 
         <h4 className="position-absolute top-0 end-0 mt-5 me-5 h4-text">
           Заботимся о здоровье ваших детей с 2001 года
@@ -75,26 +66,16 @@ export default function BlockImg() {
           rel="noopener noreferrer">
           <div className="block-btn color1">
             <div className="block-btn-border">
-              <picture>
-                <source
-                  srcSet={require("../../assets/img/home.avif")}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require("../../assets/img/home.webp")}
-                  type="image/webp"
-                />
-                <img
-                  src={require("../../assets/img/home.png")}
-                  alt="img-home"
-                  className="block-btn-img"
-                  title="img-home"
-                  loading="eager"
-                  decoding="async"
-                  width={82}
-                  height={82}
-                />
-              </picture>
+              <OptimizedImage
+                src={"home.png"}
+                alt="img-home"
+                className="block-btn-img"
+                title="img-home"
+                loading="eager"
+                decoding="async"
+                width={82}
+                height={82}
+              />
 
               <p className="text-center">Вызов врача на дом</p>
             </div>
@@ -107,26 +88,16 @@ export default function BlockImg() {
           rel="noopener noreferrer">
           <div className="block-btn color2">
             <div className="block-btn-border">
-              <picture>
-                <source
-                  srcSet={require("../../assets/img/calling.avif")}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require("../../assets/img/calling.webp")}
-                  type="image/webp"
-                />
-                <img
-                  src={require("../../assets/img/calling.png")}
-                  alt="img-programm"
-                  className="block-btn-img2"
-                  title="img-programm"
-                  loading="eager"
-                  decoding="async"
-                  width={63}
-                  height={63}
-                />
-              </picture>
+              <OptimizedImage
+                src={"calling.png"}
+                alt="img-programm"
+                className="block-btn-img2"
+                title="img-programm"
+                loading="eager"
+                decoding="async"
+                width={63}
+                height={63}
+              />
 
               <p className="text-center">Программы</p>
             </div>
@@ -139,26 +110,16 @@ export default function BlockImg() {
           rel="noopener noreferrer">
           <div className="block-btn color3">
             <div className="block-btn-border">
-              <picture>
-                <source
-                  srcSet={require("../../assets/img/analyzes.avif")}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require("../../assets/img/analyzes.webp")}
-                  type="image/webp"
-                />
-                <img
-                  src={require("../../assets/img/analyzes.png")}
-                  alt="img-analyz"
-                  className="block-btn-img"
-                  title="img-analyz"
-                  loading="eager"
-                  decoding="async"
-                  width={82}
-                  height={61}
-                />
-              </picture>
+              <OptimizedImage
+                src={"analyzes.png"}
+                alt="img-analyz"
+                className="block-btn-img"
+                title="img-analyz"
+                loading="eager"
+                decoding="async"
+                width={82}
+                height={61}
+              />
 
               <p className="text-center">Анализы</p>
             </div>

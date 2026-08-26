@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function OurPartners() {
   return (
@@ -17,25 +18,15 @@ export default function OurPartners() {
             href="https://tomoko.ru/"
             target="_blank"
             rel="noopener noreferrer">
-            <picture>
-              <source
-                srcSet={require("../../assets/img/tomoko.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/tomoko.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/tomoko.png`)}
-                loading="lazy"
-                width={324}
-                height={202}
-                alt="logo-tomoko"
-                className="w-25 mb-3"
-                title="tomoko"
-              />
-            </picture>
+            <OptimizedImage
+              src={"tomoko.png"}
+              loading="lazy"
+              width={324}
+              height={202}
+              alt="logo-tomoko"
+              className="w-25 mb-3"
+              title="tomoko"
+            />
           </a>
           <div className="w-75">
             <p className="text-sm-start lh-base fs-5">

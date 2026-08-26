@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import BlockReklama1 from "../../components/reklama/BlockReklama1";
 import SeoPage from "../../components/Seo";
 import PDFItem from "../../components/PDFItem";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function ProgramTwo() {
   return (
@@ -15,25 +16,15 @@ export default function ProgramTwo() {
       </div>
       <Container className="my-4 text-center">
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/progrmtwo2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/progrmtwo2.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/progrmtwo2.jpg`)}
-              alt="img-program-two"
-              className="progtwo-img"
-              title="Здоровый ребенок Хоум Стандарт ( c 2-х лет)"
-              loading="lazy"
-              width={460}
-              height={400}
-            />
-          </picture>
+          <OptimizedImage
+            src={"progrmtwo2.jpg"}
+            alt="img-program-two"
+            className="progtwo-img"
+            title="Здоровый ребенок Хоум Стандарт ( c 2-х лет)"
+            loading="lazy"
+            width={460}
+            height={400}
+          />
 
           <div className="lh-lg py-4">
             <p>

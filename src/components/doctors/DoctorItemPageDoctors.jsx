@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function DoctorItem({
   firstname,
@@ -16,25 +17,14 @@ export default function DoctorItem({
           className="nav-link"
           target="_top"
           rel="noopener noreferrer">
-          <picture>
-            <source
-              srcSet={require(`../../assets/img/${img}.avif`)}
-              type="image/avif"
-            />
-            <source
-              srcSet={require(`../../assets/img/${img}.webp`)}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/${img}.jpg`)}
-              className="card-img-top"
-              alt={lastname}
-              title={lastname}
-              loading="lazy"
-              width={448}
-              height={490}
-            />
-          </picture>
+          <OptimizedImage
+            src={`${img}.jpg`}
+            alt={firstname}
+            title={lastname}
+            loading="lazy"
+            width={448}
+            height={490}
+          />
         </NavLink>
         <div className="card-body">
           <NavLink

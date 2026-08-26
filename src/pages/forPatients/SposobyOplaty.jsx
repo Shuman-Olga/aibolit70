@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function SposobyOplaty() {
   return (
@@ -15,49 +16,29 @@ export default function SposobyOplaty() {
         <div>
           <h4>Оплата наличными</h4>
           <div className="my-3">
-            <picture>
-              <source
-                srcSet={require("../../assets/img/оплата_наличные.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/оплата_наличные.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/оплата_наличные.jpg`)}
-                alt="оплата_наличные"
-                className="me-5"
-                title="наличные"
-                loading="lazy"
-                width={100}
-                height={103}
-              />
-            </picture>
+            <OptimizedImage
+              src={"оплата_наличные.jpg"}
+              alt="оплата_наличные"
+              className="me-5"
+              title="наличные"
+              loading="lazy"
+              width={100}
+              height={103}
+            />
             Оплата производится наличными деньгами врачу после приема или
             оказания услуг
           </div>
           <div className="my-3">
             <h4>Банковским переводом</h4>
-            <picture>
-              <source
-                srcSet={require("../../assets/img/оплата_перевод.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/оплата_перевод.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/оплата_перевод.jpg`)}
-                alt="оплата_перевод"
-                className="me-5"
-                title="оплата"
-                loading="lazy"
-                width={100}
-                height={103}
-              />
-            </picture>
+            <OptimizedImage
+              src={"оплата_перевод.jpg"}
+              alt="оплата_перевод"
+              className="me-5"
+              title="оплата"
+              loading="lazy"
+              width={100}
+              height={103}
+            />
             Вы можете оплатить услуги переводом через Сбербанк онлайн, после
             приема или оказания услуг
           </div>

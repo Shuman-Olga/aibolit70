@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import ModalWindows from "../modal/Modal";
 import FormCallingDoctor from "../modal/FormСalling";
 import isReactSnap from "../../utilits/isReactSnap";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function BlockContacts() {
   return (
@@ -15,48 +16,28 @@ export default function BlockContacts() {
           <h3>Айболит детская медицинская служба</h3>
 
           <div className="d-flex align-items-center py-2">
-            <picture>
-              <source
-                srcSet={require("../../assets/img/auto.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/auto.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/auto.png`)}
-                loading="lazy"
-                alt="img-map"
-                className="img me-3"
-                title="address"
-                width={40}
-                height={40}
-              />
-            </picture>
+            <OptimizedImage
+              src={"auto.png"}
+              alt="img-map"
+              title="address"
+              className="img me-3"
+              loading="lazy"
+              width={40}
+              height={40}
+            />
 
             <p>г. Томск, ул. Герцена 68, строение 2</p>
           </div>
           <div className="d-flex align-items-center py-2">
-            <picture>
-              <source
-                srcSet={require("../../assets/img/time.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/time.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/time.png`)}
-                loading="lazy"
-                alt="img-time"
-                className="img me-3"
-                title="time"
-                width={40}
-                height={40}
-              />
-            </picture>
+            <OptimizedImage
+              src={"time.png"}
+              alt="img-time"
+              className="img me-3"
+              title="time"
+              width={40}
+              height={40}
+              loading="lazy"
+            />
 
             <p>
               Мы работаем: <br />
@@ -66,25 +47,15 @@ export default function BlockContacts() {
             </p>
           </div>
           <div className="d-flex align-items-center py-2">
-            <picture>
-              <source
-                srcSet={require("../../assets/img/phone-tel.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/phone-tel.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/phone-tel.png`)}
-                loading="lazy"
-                alt="img-phone"
-                className="img me-3"
-                title="phone"
-                width={40}
-                height={40}
-              />
-            </picture>
+            <OptimizedImage
+              src={"phone-tel.png"}
+              loading="lazy"
+              alt="img-phone"
+              className="img me-3"
+              title="phone"
+              width={40}
+              height={40}
+            />
 
             <a href="tel:83822609243">
               <p className="phone">+7 (3822) 60-92-43</p>

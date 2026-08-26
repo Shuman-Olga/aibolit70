@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import SeoPage from "../components/Seo";
 import ChekUpItem from "../components/ChekUpItem";
 import BlockReklama2 from "../components/reklama/BlockReklama2";
+import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function ChekUp() {
   return (
@@ -15,25 +16,15 @@ export default function ChekUp() {
       </div>
       <Container className="my-4">
         <div>
-          <picture>
-            <source
-              srcSet={require("../assets/img/uslugi3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../assets/img/uslugi3.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../assets/img/uslugi3.jpg`)}
-              alt="foto-aibolit"
-              className="img-thumbnail foto w-25"
-              title="Программы наблюдения за здоровьем ребенка"
-              loading="lazy"
-              width={314}
-              height={272}
-            />
-          </picture>
+          <OptimizedImage
+            src={"uslugi3.jpg"}
+            alt="foto-aibolit"
+            className="img-thumbnail foto w-25"
+            title="Программы наблюдения за здоровьем ребенка"
+            loading="lazy"
+            width={314}
+            height={272}
+          />
 
           <p>
             <span className="fw-bold">Педиатрический Check-up </span> — это

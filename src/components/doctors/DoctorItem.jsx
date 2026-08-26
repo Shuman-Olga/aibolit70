@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import HintAgreement from "../HintAgreement";
+import OptimizedImage from "../common/OptimizedImage";
 
 export default function DoctorPage({
   img,
@@ -29,24 +30,14 @@ export default function DoctorPage({
         <Container className="mb-5">
           <Container className="d-flex align-items-start my-4">
             <div className="p-2 border-block">
-              <picture>
-                <source
-                  srcSet={require(`../../assets/img/${img}.avif`)}
-                  type="image/avif"
-                />
-                <source
-                  srcSet={require(`../../assets/img/${img}.webp`)}
-                  type="image/webp"
-                />
-                <img
-                  src={require(`../../assets/img/${img}.jpg`)}
-                  alt={firstname}
-                  title={lastname}
-                  loading="lazy"
-                  width={300}
-                  height={328}
-                />
-              </picture>
+              <OptimizedImage
+                src={`${img}.jpg`}
+                alt={firstname}
+                title={lastname}
+                loading="lazy"
+                width={300}
+                height={328}
+              />
             </div>
             <div className="px-4 ">
               {listdoctorname.map((item, index) => (
