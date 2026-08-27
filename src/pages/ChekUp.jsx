@@ -7,7 +7,7 @@ import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function ChekUp() {
   return (
-    <Container id="chek-ap" fluid>
+    <Container id="chek-up" fluid>
       <SeoPage page="chekap" />
       <div className="page-h1">
         <Container>

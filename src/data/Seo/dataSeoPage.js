@@ -439,7 +439,7 @@ subpages page ForPatients
       "Педиатрический Check-up на дому. Ознакомьтесь с программами клиник 'Айболит'",
     keywords:
       "плановый осмотр, ребенка, в месяц, год, три месяца, 6 месяцев, медосмотр, комплексный медицинский осмотр, новорожденного",
-    urlname: "https://aibolit70.ru/chek-ap/",
+    urlname: "https://aibolit70.ru/chek-up/",
     img: "post1-2.jpg",
   },
   /*

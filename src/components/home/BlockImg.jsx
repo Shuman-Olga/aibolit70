@@ -43,7 +43,7 @@ export default function BlockImg() {
               </Link>
             </li>
             <li>
-              <Link to="chek-ap/" target="_top" rel="noopener noreferrer">
+              <Link to="chek-up/" target="_top" rel="noopener noreferrer">
                 МЕДОСМОТРЫ (Чек-ап)
               </Link>
             </li>

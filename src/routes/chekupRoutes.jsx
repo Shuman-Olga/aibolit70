@@ -4,7 +4,7 @@ const ChekUp = React.lazy(() => import("../pages/ChekUp"));
 
 const chekupRoutes = [
   {
-    path: "chek-ap",
+    path: "chek-up",
     handle: { crumb: "Чек-апы", nav: true },
 
     children: [{ index: true, element: <ChekUp /> }],
