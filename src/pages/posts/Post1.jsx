@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post1() {
   return (
@@ -11,26 +12,16 @@ export default function Post1() {
       <div className="size-cont border mb-4">
         <h1 className="my-4">ДЕТСКИЙ НЕВРОЛОГ на дом</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post1.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post1.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post1.jpg`)}
-              alt="nevrolog_na_dom"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={333}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post1.jpg"}
+            alt="nevrolog_na_dom"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={333}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fw-bold">Детский врач-невролог</span> играет важную
@@ -130,28 +121,17 @@ export default function Post1() {
         <hr />
         <div>
           <h5 className="my-4">Профилактические осмотры у невролога </h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/Shevchenko_Anastasiya_Nikolaevna2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/Shevchenko_Anastasiya_Nikolaevna2.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(
-                `../../assets/img/Shevchenko_Anastasiya_Nikolaevna2.jpg`,
-              )}
-              alt="nevrolog_na_dom_osmotr"
-              className="size-img"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={423}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"Shevchenko_Anastasiya_Nikolaevna2.jpg"}
+            alt="nevrolog_na_dom_osmotr"
+            className="size-img"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={423}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Да, регулярные{" "}
@@ -268,26 +248,17 @@ export default function Post1() {
           <h5 className="my-4">
             Что будет делать невролог, когда приедет к ребенку?
           </h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/deti.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/deti.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/deti.jpg`)}
-              alt="nevrolog_na_dom_osmotr_rebenka"
-              className="size-img pe-2"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={423}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"deti.jpg"}
+            alt="nevrolog_na_dom_osmotr_rebenka"
+            className="size-img pe-2"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={423}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             При визите невролога к ребенку на дом врач будет следовать

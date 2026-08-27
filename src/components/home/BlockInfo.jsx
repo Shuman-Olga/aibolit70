@@ -13,7 +13,8 @@ export default function BlockInfo() {
             alt="foto"
             width={650}
             height={550}
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
             title="foto"
             className="img-foto me-3"
           />

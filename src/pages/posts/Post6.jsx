@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama4 from "../../components/reklama/BlockReklama4";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post6() {
   return (
@@ -10,26 +11,16 @@ export default function Post6() {
       <div className="size-cont border">
         <h1 className="my-4">Как помочь ребенку перенести жару</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post6-1.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post6-1.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post6-1.jpg`)}
-              alt="rebenok"
-              title="ребенок"
-              loading="lazy"
-              width={450}
-              height={436488}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post6-1.jpg"}
+            alt="rebenok"
+            title="ребенок"
+            loading="lazy"
+            width={450}
+            height={436488}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <ul className="list-unstyled">
             <li>🔸Одежда хлопковая или льняная, свободная и светлых тонов.</li>
@@ -64,26 +55,16 @@ export default function Post6() {
           </p>
         </div>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/DSC_0849.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/DSC_0849.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/DSC_0849.jpg`)}
-              alt="deti_detski_sad"
-              className="w-100"
-              title="детский сад"
-              loading="lazy"
-              width={450}
-              height={488}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            src={"DSC_0849.jpg"}
+            alt="deti_detski_sad"
+            className="w-100"
+            title="детский сад"
+            loading="lazy"
+            width={450}
+            height={488}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p className="mt-4">
             🔆Солнечный и тепловой удар у детей – понятия сходные. Солнечный

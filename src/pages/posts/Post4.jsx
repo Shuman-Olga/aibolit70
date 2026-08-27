@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
 import SeoPage from "../../components/Seo";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post4() {
   return (
@@ -11,26 +12,16 @@ export default function Post4() {
       <div className="size-cont border mb-4">
         <h1 className="my-4">ПАТРОНАЖ НОВОРОЖДЕННОГО ребёнка</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/massage.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/massage.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/massage.jpg`)}
-              alt="patronaj_novorojdennogo"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={429}
-              height={286}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"massage.jpg"}
+            alt="patronaj_novorojdennogo"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={429}
+            height={286}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Очень важно, чтобы маленького человека, только что появившегося на
@@ -57,26 +48,16 @@ export default function Post4() {
           </p>
         </div>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/uslugi2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/uslugi2.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/uslugi2.jpg`)}
-              alt="nevrolog_na_dom_osmotr"
-              className="size-img"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={389}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            src={"uslugi2.jpg"}
+            alt="nevrolog_na_dom_osmotr"
+            className="size-img"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={389}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Опытный врач внимательно выслушает вас, осмотрит кожу и слизистые,
@@ -97,26 +78,17 @@ export default function Post4() {
         </div>
         <div>
           <h5 className="-4">Кому необходим послеродовой патронаж?</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/spravka3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/spravka3.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/spravka3.jpg`)}
-              alt="nevrolog_na_dom_osmotr"
-              className="size-img"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={429}
-              height={437}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"spravka3.jpg"}
+            alt="nevrolog_na_dom_osmotr"
+            className="size-img"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={429}
+            height={437}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Послеродовое посещение мамы и ребенка необходимо абсолютно всем

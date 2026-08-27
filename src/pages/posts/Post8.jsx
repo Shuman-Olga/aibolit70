@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post8() {
   return (
@@ -16,26 +17,16 @@ export default function Post8() {
           </ModalWindows>
         </div>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/massage.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/massage.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/massage.jpg`)}
-              alt="pediatr"
-              title="ПЕДИАТР"
-              loading="lazy"
-              width={450}
-              height={300}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"massage.jpg"}
+            alt="pediatr"
+            title="ПЕДИАТР"
+            loading="lazy"
+            width={450}
+            height={300}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             В{" "}
@@ -141,26 +132,17 @@ export default function Post8() {
         <hr />
         <div>
           <h5 className="my-4">Когда вызывать детского врача на дом?</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/reklama-3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/reklama-3.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/reklama-3.jpg`)}
-              alt="pediatr na dom"
-              title="педиатр на дом"
-              loading="lazy"
-              width={450}
-              height={350}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            className="size-img"
+            src={"reklama-3.jpg"}
+            alt="pediatr na dom"
+            title="педиатр на дом"
+            loading="lazy"
+            width={450}
+            height={350}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Педиатра необходимо незамедлительно вызывать в случае проявления
@@ -353,28 +335,17 @@ export default function Post8() {
         <hr />
         <div>
           <h5 className="my-4">Вызов педиатра для профилактического осмотра</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/programma_nablyudeniya_za_detmi3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/programma_nablyudeniya_za_detmi3.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(
-                `../../assets/img/programma_nablyudeniya_za_detmi3.jpg`,
-              )}
-              alt="pediatr osmotr"
-              title="педиатр на дом, консультация"
-              loading="lazy"
-              width={450}
-              height={371}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            className="size-img"
+            src={"programma_nablyudeniya_za_detmi3.jpg"}
+            alt="pediatr osmotr"
+            title="педиатр на дом, консультация"
+            loading="lazy"
+            width={450}
+            height={371}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             В первый год, когда малыш активно растет и развивается, необходимы

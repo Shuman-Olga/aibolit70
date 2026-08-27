@@ -42,6 +42,26 @@ async function createFormat(
   options,
   originalSize,
 ) {
+  if (fs.existsSync(targetPath)) {
+    const existingSize = fs.statSync(targetPath).size;
+
+    if (existingSize < originalSize) {
+      console.log(
+        `  ${format}:     already exists (${formatKB(existingSize)})`,
+      );
+
+      return existingSize;
+    }
+
+    fs.unlinkSync(targetPath);
+
+    console.log(
+      `  ${format}:     removed (${formatKB(existingSize)} >= ${formatKB(originalSize)})`,
+    );
+
+    return null;
+  }
+
   await sharp(sourcePath)[format](options).toFile(targetPath);
 
   const size = fs.statSync(targetPath).size;
@@ -78,22 +98,21 @@ async function processImage(filePath) {
   console.log(`\nProcessing: ${path.basename(filePath)}`);
   console.log(`  original: ${formatKB(originalSize)}`);
 
-  let webpSize = null;
-  let avifSize = null;
+  const webpSize = await createFormat(
+    filePath,
+    webpPath,
+    "webp",
+    WEBP_OPTIONS,
+    originalSize,
+  );
 
-  // WebP
-  if (!fs.existsSync(webpPath)) {
-    await sharp(filePath).webp(WEBP_OPTIONS).toFile(webpPath);
-  } else {
-    console.log("  webp:     already exists");
-  }
-
-  // AVIF
-  if (!fs.existsSync(avifPath)) {
-    await sharp(filePath).avif(AVIF_OPTIONS).toFile(avifPath);
-  } else {
-    console.log("  avif:     already exists");
-  }
+  const avifSize = await createFormat(
+    filePath,
+    avifPath,
+    "avif",
+    AVIF_OPTIONS,
+    originalSize,
+  );
 
   return {
     original: originalSize,
@@ -148,10 +167,14 @@ async function main() {
   console.log(`AVIF:          ${formatKB(totalAvif)}`);
 
   const webpSaving =
-    totalOriginal > 0 ? ((1 - totalWebp / totalOriginal) * 100).toFixed(1) : 0;
+    totalOriginal > 0
+      ? ((1 - totalWebp / totalOriginal) * 100).toFixed(1)
+      : "0.0";
 
   const avifSaving =
-    totalOriginal > 0 ? ((1 - totalAvif / totalOriginal) * 100).toFixed(1) : 0;
+    totalOriginal > 0
+      ? ((1 - totalAvif / totalOriginal) * 100).toFixed(1)
+      : "0.0";
 
   console.log(`WebP saving:   ${webpSaving}%`);
   console.log(`AVIF saving:   ${avifSaving}%`);

@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama2 from "../../components/reklama/BlockReklama2";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post9() {
   return (
@@ -10,26 +11,16 @@ export default function Post9() {
       <div className="size-cont border">
         <h1 className="my-4">ПЕНТАКСИМ</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/pentaksim.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/pentaksim.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/pentaksim.jpg`)}
-              alt="pediatr"
-              title="ПЕДИАТР"
-              loading="lazy"
-              width={450}
-              height={315}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"pentaksim.jpg"}
+            alt="pediatr"
+            title="ПЕДИАТР"
+            loading="lazy"
+            width={450}
+            height={315}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p className="fw-bold">
             «ПЕНТАКСИМ» — прививка от дифтерии, столбняка, коклюша,

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post7() {
   return (
@@ -11,26 +12,16 @@ export default function Post7() {
       <div className="size-cont border">
         <h1 className="my-4">ДЕТСКИЙ ЛОР врач на дом</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post7-1.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post7-1.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post7-1.jpg`)}
-              alt="rebenok"
-              title="ребенок"
-              loading="lazy"
-              width={450}
-              height={402}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post7-1.jpg"}
+            alt="rebenok"
+            title="ребенок"
+            loading="lazy"
+            width={450}
+            height={402}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fst-italic">Заболевания уха, горла и носа</span>
@@ -116,26 +107,17 @@ export default function Post7() {
         <hr />
         <div>
           <h5 className="my-4">Что делает детский ЛОР – врач на дому</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post7-2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post7-2.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post7-2.jpg`)}
-              alt="rebenok"
-              title="ребенок"
-              loading="lazy"
-              width={450}
-              height={491}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            className="size-img"
+            src={"post7-2.jpg"}
+            alt="rebenok"
+            title="ребенок"
+            loading="lazy"
+            width={450}
+            height={491}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fst-italic">Врач отоларинголог </span>– это
@@ -305,26 +287,17 @@ export default function Post7() {
           <h5 className="my-4">
             Особенности ЛОР заболеваний у детей разных возрастов
           </h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post7-3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post7-3.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post7-3.jpg`)}
-              alt="rebenok"
-              title="ребенок"
-              loading="lazy"
-              width={450}
-              height={371}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            className="size-img"
+            src={"post7-3.jpg"}
+            alt="rebenok"
+            title="ребенок"
+            loading="lazy"
+            width={450}
+            height={371}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Оставленная без внимания обычная{" "}

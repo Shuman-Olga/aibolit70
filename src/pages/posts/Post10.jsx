@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama2 from "../../components/reklama/BlockReklama2";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post10() {
   return (
@@ -10,26 +11,16 @@ export default function Post10() {
       <div className="size-cont border">
         <h1 className="my-4">Чек-ап детский на дому</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/detskii_vrach_rebenok.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/detskii_vrach_rebenok.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/detskii_vrach_rebenok.jpg`)}
-              alt="pediatr"
-              title="ПЕДИАТР"
-              loading="lazy"
-              width={450}
-              height={321}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"detskii_vrach_rebenok.jpg"}
+            alt="pediatr"
+            title="ПЕДИАТР"
+            loading="lazy"
+            width={450}
+            height={321}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Скрининговые{" "}

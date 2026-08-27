@@ -16,8 +16,8 @@ export default function DoctorItem(props) {
             className="card-img-top"
             alt={props.data.firstname}
             title={props.data.title}
-            width={"100%"}
-            height={"auto"}
+            width={207}
+            height={226}
           />
 
           <div className="card-body ">

@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama4 from "../../components/reklama/BlockReklama4";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post12() {
   return (
@@ -10,26 +11,16 @@ export default function Post12() {
       <div className="size-cont border">
         <h1 className="my-4">Внимание, поллиноз!</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/deti7.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/deti7.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/deti7.jpg`)}
-              alt="pediatr"
-              title="ПЕДИАТР"
-              loading="lazy"
-              width={450}
-              height={300}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"deti7.jpg"}
+            alt="pediatr"
+            title="ПЕДИАТР"
+            loading="lazy"
+            width={450}
+            height={300}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             С приходом весны и яркого солнца многие дети начинают испытывать

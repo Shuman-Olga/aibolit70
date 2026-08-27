@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post5() {
   return (
@@ -10,26 +11,16 @@ export default function Post5() {
       <div className="size-cont border">
         <h1 className="my-4">Адаптация к детскому саду</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post5.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post5.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post5.jpg`)}
-              alt="adaptaciya_k_detskomu_sadu"
-              title="детский сад"
-              loading="lazy"
-              width={450}
-              height={359}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post5.jpg"}
+            alt="adaptaciya_k_detskomu_sadu"
+            title="детский сад"
+            loading="lazy"
+            width={450}
+            height={359}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fw-bold">
@@ -67,26 +58,17 @@ export default function Post5() {
         </div>
         <div>
           <h5 className="my-4">Что такое адаптация?</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/deti2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/deti2.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/deti2.jpg`)}
-              alt="deti_detski_sad"
-              className="size-img"
-              title="детский сад"
-              loading="lazy"
-              width={450}
-              height={431}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"deti2.jpg"}
+            alt="deti_detski_sad"
+            className="size-img"
+            title="детский сад"
+            loading="lazy"
+            width={450}
+            height={431}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p className="mt-4">
             <span className="fst-italic">Адаптация </span> - это приспособление
@@ -228,26 +210,17 @@ export default function Post5() {
 
         <div>
           <h5 className="my-4">Какой может быть адаптация ребенка?</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/deti3.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/deti3.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/deti3.jpg`)}
-              alt="rebenok_detski_sad"
-              className="size-img-l"
-              title="детский сад"
-              loading="lazy"
-              width={450}
-              height={463}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"deti3.jpg"}
+            alt="rebenok_detski_sad"
+            className="size-img-l"
+            title="детский сад"
+            loading="lazy"
+            width={450}
+            height={463}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Теперь мы знаем, что происходит с крохой, когда мы отдаем его в
@@ -390,26 +363,17 @@ export default function Post5() {
             <h5 className="my-4">
               Как помочь малышу приспособиться к детскому садику?
             </h5>
-            <picture>
-              <source
-                srcSet={require("../../assets/img/deti5.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/deti5.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/deti5.jpg`)}
-                alt="rebenok_detski_sad"
-                className="size-img-l"
-                title="детский сад"
-                loading="lazy"
-                width={434}
-                height={528}
-                style={{ width: "50%", height: "auto" }}
-              />
-            </picture>
+
+            <OptimizedImage
+              src={"deti5.jpg"}
+              alt="rebenok_detski_sad"
+              className="size-img-l"
+              title="детский сад"
+              loading="lazy"
+              width={434}
+              height={528}
+              style={{ width: "50%", height: "auto" }}
+            />
 
             <p className="mt-4">
               Чтобы помочь своему ребенку успешно адаптироваться в садике,
@@ -743,26 +707,16 @@ export default function Post5() {
           </div>
           <div>
             <h5 className="my-4">Что такое адаптация?</h5>
-            <picture>
-              <source
-                srcSet={require("../../assets/img/deti4.avif")}
-                type="image/avif"
-              />
-              <source
-                srcSet={require("../../assets/img/deti4.webp")}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../assets/img/deti4.jpg`)}
-                alt="mama-rebenok"
-                className="size-img"
-                title="детский сад"
-                loading="lazy"
-                width={450}
-                height={488}
-                style={{ width: "50%", height: "auto" }}
-              />
-            </picture>
+            <OptimizedImage
+              src={"deti4.jpg"}
+              alt="mama-rebenok"
+              className="size-img"
+              title="детский сад"
+              loading="lazy"
+              width={450}
+              height={488}
+              style={{ width: "50%", height: "auto" }}
+            />
 
             <p className="mt-4">
               <span className="fw-bold">И главное, помните: </span>до того

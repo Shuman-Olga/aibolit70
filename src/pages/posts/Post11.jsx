@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 
 import SeoPage from "../../components/Seo";
 import BlockReklama4 from "../../components/reklama/BlockReklama4";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post11() {
   return (
@@ -10,26 +11,16 @@ export default function Post11() {
       <div className="size-cont border">
         <h1 className="my-4">Советы врача-аллерголога</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/post7-2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/post7-2.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/post7-2.jpg`)}
-              alt="pediatr"
-              title="ПЕДИАТР"
-              loading="lazy"
-              width={450}
-              height={491}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"post7-2.jpg"}
+            alt="pediatr"
+            title="ПЕДИАТР"
+            loading="lazy"
+            width={450}
+            height={491}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <h5>Детская аллергия: причины, проявления и меры профилактики</h5>
           <p>

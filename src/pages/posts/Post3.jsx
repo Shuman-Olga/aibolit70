@@ -4,6 +4,7 @@ import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
+import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post3() {
   return (
@@ -12,26 +13,16 @@ export default function Post3() {
       <div className="size-cont border mb-3">
         <h1 className="my-4">ДЕТСКИЙ ХИРУРГ на дом</h1>
         <div>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/Petuhova_Olga_Viktorovna.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/Petuhova_Olga_Viktorovna.webp")}
-              type="image/webp"
-            />
-            <img
-              className="size-img"
-              src={require(`../../assets/img/Petuhova_Olga_Viktorovna.jpg`)}
-              alt="hirurg_na_dom"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={491}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+          <OptimizedImage
+            className="size-img"
+            src={"Petuhova_Olga_Viktorovna.jpg"}
+            alt="hirurg_na_dom"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={491}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fw-bold">Детский хирург </span>
@@ -117,26 +108,17 @@ export default function Post3() {
         <hr />
         <div>
           <h5 className="mt-3">Профилактические осмотры у врача-хирурга</h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/hirurg2.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/hirurg2.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/hirurg2.jpg`)}
-              alt="hirurg_na_dom_osmotr"
-              className="size-img"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={450}
-              height={461}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"hirurg2.jpg"}
+            alt="hirurg_na_dom_osmotr"
+            className="size-img"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={450}
+            height={461}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             <span className="fst-italic">
@@ -233,26 +215,17 @@ export default function Post3() {
           <h5 className="my-3">
             Что будет делать хирург, когда приедет к ребенку?
           </h5>
-          <picture>
-            <source
-              srcSet={require("../../assets/img/hirurg.avif")}
-              type="image/avif"
-            />
-            <source
-              srcSet={require("../../assets/img/hirurg.webp")}
-              type="image/webp"
-            />
-            <img
-              src={require(`../../assets/img/hirurg.jpg`)}
-              alt="nevrolog_na_dom_osmotr_rebenka"
-              className="size-img pe-3"
-              title="Детский невролог на дом"
-              loading="lazy"
-              width={434}
-              height={429}
-              style={{ width: "50%", height: "auto" }}
-            />
-          </picture>
+
+          <OptimizedImage
+            src={"hirurg.jpg"}
+            alt="nevrolog_na_dom_osmotr_rebenka"
+            className="size-img pe-3"
+            title="Детский невролог на дом"
+            loading="lazy"
+            width={434}
+            height={429}
+            style={{ width: "50%", height: "auto" }}
+          />
 
           <p>
             Во время визита на дом хирург проводит всесторонний осмотр и оценку

@@ -28,7 +28,6 @@ export default function OptimizedImage({
     return null;
   }
 
-  // Если передали "home.png", отделяем имя от расширения.
   const match = src.match(/^(.+)\.(png|jpe?g)$/i);
 
   if (!match) {
@@ -36,7 +35,6 @@ export default function OptimizedImage({
       `OptimizedImage: unsupported image source "${src}". ` +
         `Expected .jpg, .jpeg or .png`,
     );
-
     return null;
   }
 
@@ -55,7 +53,6 @@ export default function OptimizedImage({
   return (
     <picture>
       {avif && <source srcSet={avif} type="image/avif" />}
-
       {webp && <source srcSet={webp} type="image/webp" />}
 
       <img
