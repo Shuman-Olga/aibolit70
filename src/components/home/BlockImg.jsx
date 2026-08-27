@@ -13,8 +13,8 @@ export default function BlockImg() {
           alt="img-background"
           className="img-background"
           loading="eager"
-          width={"100%"}
-          height={"auto"}
+          width={1200}
+          height={600}
           // style={{ width: "100%", height: "auto" }}
           decoding="async"
           title="foto"

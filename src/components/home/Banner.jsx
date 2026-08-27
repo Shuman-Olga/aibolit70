@@ -8,7 +8,7 @@ export default function Banner() {
       <hr className="w-50" />
       <div className="d-flex ">
         <OptimizedImage
-          src={"photo_2025-02-25_22-24-(03).jpg"}
+          src={"photo_2025-02-25_22-24-03.jpg"}
           alt="img-background"
           loading="lazy"
           width={300}
