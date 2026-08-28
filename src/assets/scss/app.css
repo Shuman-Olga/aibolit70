@@ -185,7 +185,7 @@ p {
 
 @media (max-width: 1024px) {
   #doctor img {
-    width: 75vw;
+    width: 100%;
   }
   #doctor .d-flex {
     flex-direction: column;

@@ -76,6 +76,7 @@ export default function Footer() {
           title="logo"
           width={188}
           height={61}
+          style={{ width: "100%", height: "auto" }}
         />
 
         <div className=" block-colum d-flex justify-content-between align-items-center ">

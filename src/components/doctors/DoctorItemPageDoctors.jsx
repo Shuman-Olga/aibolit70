@@ -24,6 +24,7 @@ export default function DoctorItem({
             loading="lazy"
             width={448}
             height={490}
+            style={{ width: "100%", height: "auto" }}
           />
         </NavLink>
         <div className="card-body">

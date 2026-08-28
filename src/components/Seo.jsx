@@ -21,7 +21,10 @@ export default function SeoPage(props) {
       <meta property="og:title" content={data.title} />
       <meta property="og:description" content={data.description} />
       <meta property="og:url" content={data.urlname} />
-      <meta property="og:image" content={data.img} />
+      <meta
+        property="og:image"
+        content={`https://aibolit70.ru/assets/img/${data.img}`}
+      />
     </Helmet>
   );
 }

@@ -23,6 +23,7 @@ export default function About() {
             alt="foto-aibolot"
             className="foto"
             title="foto"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div className="text mt-4">

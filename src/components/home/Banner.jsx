@@ -13,6 +13,7 @@ export default function Banner() {
           loading="lazy"
           width={300}
           height={328}
+          style={{ width: "100%", height: "auto" }}
         />
         {/* <img
           src={require("../../assets/img/photo_2025-02-25_22-24-03.jpg")}

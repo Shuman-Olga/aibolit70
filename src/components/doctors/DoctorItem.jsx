@@ -37,6 +37,7 @@ export default function DoctorPage({
                 loading="lazy"
                 width={300}
                 height={328}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="px-4 ">

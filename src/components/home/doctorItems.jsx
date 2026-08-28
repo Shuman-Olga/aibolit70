@@ -18,6 +18,7 @@ export default function DoctorItem(props) {
             title={props.data.title}
             width={207}
             height={226}
+            style={{ width: "100%", height: "auto" }}
           />
 
           <div className="card-body ">
