@@ -60,6 +60,8 @@ export default function OptimizedImage({
         alt={alt}
         title={title}
         loading={loading}
+        // decoding="async"
+        // fetchPriority={loading === "eager" ? "high" : "auto"}
         width={width}
         height={height}
         className={className}

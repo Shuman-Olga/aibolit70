@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { validationSchema } from "./formShema";
+import Icon from "../common/Icon";
 
 export default function ModalCallback() {
   const {
@@ -52,7 +53,7 @@ export default function ModalCallback() {
     <div id="modalcallback">
       <div className="callback-bt" onClick={handleShow}>
         <div className="text-call">
-          <i className="bi bi-telephone"></i>
+          <Icon name="telephone" size={18} />
         </div>
       </div>
 

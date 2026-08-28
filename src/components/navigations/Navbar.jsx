@@ -30,6 +30,7 @@ import Collapse from "bootstrap/js/dist/collapse";
 //   );
 // }
 import { useEffect, useRef } from "react";
+import Icon from "../common/Icon";
 
 export default function Navbar() {
   const menu = routesMain[0].children.filter((route) => route.handle?.nav);
@@ -73,7 +74,7 @@ export default function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent">
-          <i className="bi bi-list"></i>
+          <Icon name="list" size={24} />
         </button>
         <div
           ref={collapseRef}

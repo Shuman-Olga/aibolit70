@@ -6,13 +6,20 @@ const IMAGE_DIR = path.resolve(__dirname, "../src/assets/img");
 
 const SOURCE_EXTENSIONS = [".jpg", ".jpeg", ".png"];
 
+const MAX_WIDTH = 1600;
+const MAX_HEIGHT = 1600;
+
+const DOCUMENT_MAX_WIDTH = 2400;
+const DOCUMENT_MAX_HEIGHT = 2400;
+
 const WEBP_OPTIONS = {
-  quality: 80,
+  quality: 72,
+  effort: 6,
 };
 
 const AVIF_OPTIONS = {
-  quality: 65,
-  effort: 4,
+  quality: 50,
+  effort: 6,
 };
 
 function getFilesRecursive(dir) {
@@ -41,28 +48,12 @@ async function createFormat(
   format,
   options,
   originalSize,
+  resizeOptions,
 ) {
-  if (fs.existsSync(targetPath)) {
-    const existingSize = fs.statSync(targetPath).size;
-
-    if (existingSize < originalSize) {
-      console.log(
-        `  ${format}:     already exists (${formatKB(existingSize)})`,
-      );
-
-      return existingSize;
-    }
-
-    fs.unlinkSync(targetPath);
-
-    console.log(
-      `  ${format}:     removed (${formatKB(existingSize)} >= ${formatKB(originalSize)})`,
-    );
-
-    return null;
-  }
-
-  await sharp(sourcePath)[format](options).toFile(targetPath);
+  await sharp(sourcePath)
+    .resize(resizeOptions)
+    [format](options)
+    .toFile(targetPath);
 
   const size = fs.statSync(targetPath).size;
 
@@ -70,13 +61,13 @@ async function createFormat(
     fs.unlinkSync(targetPath);
 
     console.log(
-      `  ${format}:     skipped (${formatKB(size)} >= ${formatKB(originalSize)})`,
+      `  ${format}: skipped (${formatKB(size)} >= ${formatKB(originalSize)})`,
     );
 
-    return null;
+    return 0;
   }
 
-  console.log(`  ${format}:     ${formatKB(size)}`);
+  console.log(`  ${format}: ${formatKB(size)}`);
 
   return size;
 }
@@ -95,7 +86,18 @@ async function processImage(filePath) {
 
   const originalSize = fs.statSync(filePath).size;
 
-  console.log(`\nProcessing: ${path.basename(filePath)}`);
+  const fileName = path.basename(filePath);
+
+  const isDocument = /^Лицензия/i.test(fileName);
+
+  const resizeOptions = {
+    width: isDocument ? DOCUMENT_MAX_WIDTH : MAX_WIDTH,
+    height: isDocument ? DOCUMENT_MAX_HEIGHT : MAX_HEIGHT,
+    fit: "inside",
+    withoutEnlargement: true,
+  };
+
+  console.log(`\nProcessing: ${fileName}`);
   console.log(`  original: ${formatKB(originalSize)}`);
 
   const webpSize = await createFormat(
@@ -104,6 +106,7 @@ async function processImage(filePath) {
     "webp",
     WEBP_OPTIONS,
     originalSize,
+    resizeOptions,
   );
 
   const avifSize = await createFormat(
@@ -112,12 +115,13 @@ async function processImage(filePath) {
     "avif",
     AVIF_OPTIONS,
     originalSize,
+    resizeOptions,
   );
 
   return {
     original: originalSize,
-    webp: webpSize || 0,
-    avif: avifSize || 0,
+    webp: webpSize,
+    avif: avifSize,
   };
 }
 
@@ -165,19 +169,6 @@ async function main() {
   console.log(`Original:      ${formatKB(totalOriginal)}`);
   console.log(`WebP:          ${formatKB(totalWebp)}`);
   console.log(`AVIF:          ${formatKB(totalAvif)}`);
-
-  const webpSaving =
-    totalOriginal > 0
-      ? ((1 - totalWebp / totalOriginal) * 100).toFixed(1)
-      : "0.0";
-
-  const avifSaving =
-    totalOriginal > 0
-      ? ((1 - totalAvif / totalOriginal) * 100).toFixed(1)
-      : "0.0";
-
-  console.log(`WebP saving:   ${webpSaving}%`);
-  console.log(`AVIF saving:   ${avifSaving}%`);
 }
 
 main().catch((error) => {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Nav } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import { dataSeo } from "../data/Seo/dataSeoPage";
+import Icon from "../components/common/Icon";
 
 export default function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -44,7 +45,7 @@ export default function SearchPage() {
             placeholder="Поиск"
           />
           <button className="btn " type="submit" title="btn-search-page">
-            <i className="bi bi-search"></i>
+            <Icon name="search" size={18} />{" "}
           </button>
         </form>
       </Container>

@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./common/Icon";
 
 export default function Search() {
   return (
@@ -15,9 +16,8 @@ export default function Search() {
         <button
           className="btn btn-outline-success"
           type="submit"
-          title="btn-search-header"
-        >
-          <i className="bi bi-search"></i>
+          title="btn-search-header">
+          <Icon name="search" size={18} />
         </button>
       </form>
     </div>

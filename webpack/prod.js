@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
 const common = require("./common.js");
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
@@ -51,30 +51,19 @@ module.exports = merge(common, {
           ],
         },
       }),
-      // new ImageMinimizerPlugin({
-      //   minimizer: {
-      //     implementation: ImageMinimizerPlugin.imageminGenerate,
-      //     options: {
-      //       plugins: [
-      //         ["imagemin-mozjpeg", { quality: 75 }],
-      //         ["imagemin-pngquant", { quality: [0.6, 0.8] }],
-      //         ["imagemin-webp", { quality: 75 }],
-      //         ["imagemin-avif", { quality: 50 }],
-      //       ],
-      //     },
-      //   },
-      // }),
     ],
     splitChunks: {
       chunks: "all",
       cacheGroups: {
         react: {
+          // test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
           name: "react",
           priority: 20,
         },
         vendor: {
-          test: /node_modules/,
+          // test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           priority: 10,
         },

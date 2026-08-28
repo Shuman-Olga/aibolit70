@@ -10,12 +10,11 @@ import programsRoutes from "./programsRoutes";
 import chekupRoutes from "./chekupRoutes";
 import servicesRoutes from "./servicesRoutes";
 import aboutRoutes from "./aboutRoutes";
-import ErrorPage from "../pages/ErrorPage";
 
 const Home = React.lazy(() => import("../pages/Home"));
 const SearchPage = React.lazy(() => import("../pages/SearchPage"));
 const Contacts = React.lazy(() => import("../pages/Сontacts"));
-// const ErrorPage = React.lazy(() => import("../pages/ErrorPage"));
+const ErrorPage = React.lazy(() => import("../pages/ErrorPage"));
 
 export const routesMain = [
   {
