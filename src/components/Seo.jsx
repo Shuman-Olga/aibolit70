@@ -3,13 +3,14 @@ import { dataSeo } from "../data/Seo/dataSeoPage";
 
 export default function SeoPage(props) {
   const data = dataSeo.find((item) => item.namePage === `${props.page}`);
+
   if (!data) return null;
+
   return (
     <Helmet>
       <title>{data.title}</title>
 
       <meta name="description" content={data.description} />
-
       <meta name="robots" content="index, follow" />
 
       <link rel="canonical" href={data.urlname} />
@@ -17,12 +18,19 @@ export default function SeoPage(props) {
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Айболит" />
       <meta property="og:locale" content="ru_RU" />
-
       <meta property="og:title" content={data.title} />
       <meta property="og:description" content={data.description} />
       <meta property="og:url" content={data.urlname} />
       <meta
         property="og:image"
+        content={`https://aibolit70.ru/assets/img/${data.img}`}
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={data.title} />
+      <meta name="twitter:description" content={data.description} />
+      <meta
+        name="twitter:image"
         content={`https://aibolit70.ru/assets/img/${data.img}`}
       />
     </Helmet>
