@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /error/
-Disallow: /search/
-
-Sitemap: https://aibolit70.ru/sitemap.xml
