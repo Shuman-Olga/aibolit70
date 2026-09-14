@@ -1,4 +1,3 @@
-```apache
 # =========================================================
 # AIBOLIT70.RU
 # Apache / Beget
@@ -27,8 +26,7 @@ ServerSignature Off
 
     # =====================================================
     # ERROR PAGES
-    #
-    # Не переписываем страницы ошибок.
+    # Не переписываем собственные страницы ошибок
     # =====================================================
 
     RewriteRule ^error/ - [L]
@@ -36,7 +34,6 @@ ServerSignature Off
 
     # =====================================================
     # HTTPS + WWW → NON-WWW
-    #
     # Канонический домен:
     # https://aibolit70.ru/
     # =====================================================
@@ -55,10 +52,20 @@ ServerSignature Off
 
 
     # =====================================================
-    # REMOVE INDEX / DEFAULT / MAIN
+    # TRAILING SLASH
     #
-    # /index.html       → /
-    # /about/index.html → /about/
+    # Добавляем / только для URL-маршрутов.
+    # Файлы (.html, .css, .js, .png и т.д.) не затрагиваем.
+    # =====================================================
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteCond %{REQUEST_URI} !\.[^./]+$
+    RewriteRule ^(.+)$ https://aibolit70.ru/$1/ [R=301,L]
+
+
+    # =====================================================
+    # REMOVE INDEX / DEFAULT / MAIN
     # =====================================================
 
     RewriteCond %{THE_REQUEST} \s/+(.*/)?(?:index|default|main)\.(?:html?|php)\s [NC]
@@ -68,15 +75,8 @@ ServerSignature Off
     # =====================================================
     # REAL FILES / REAL DIRECTORIES
     #
-    # React-snap создаёт:
-    #
-    # /index.html
-    # /about/index.html
-    # /doctors/index.html
-    # /services/index.html
-    # ...
-    #
-    # Существующие файлы и директории отдаём напрямую.
+    # Если файл или директория реально существуют,
+    # Apache отдаёт их напрямую.
     # =====================================================
 
     RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -85,26 +85,33 @@ ServerSignature Off
 
 
     # =====================================================
+    # UNKNOWN URL → REAL HTTP 404
+    #
     # ВАЖНО:
+    # Здесь НЕТ React SPA fallback.
     #
-    # НЕТ React SPA FALLBACK!
-    #
-    # НЕТ:
-    # RewriteRule ^ index.html [L]
-    #
-    # НЕТ:
-    # RewriteRule ^ - [R=404,L]
-    #
-    # Если файл/директория не существуют, Apache
-    # самостоятельно возвращает HTTP 404 и использует
-    # ErrorDocument 404 ниже.
+    # Несуществующий URL должен получить HTTP 404,
+    # а не index.html со статусом 200.
     # =====================================================
+
+    RewriteRule ^ - [R=404,L]
 
 </IfModule>
 
 
 # =========================================================
 # ERROR DOCUMENTS
+#
+# Должны находиться физически:
+#
+# /error/400.html
+# /error/401.html
+# /error/403.html
+# /error/404.html
+# /error/500.html
+# /error/502.html
+# /error/503.html
+# /error/504.html
 # =========================================================
 
 ErrorDocument 400 /error/400.html
@@ -124,7 +131,6 @@ ErrorDocument 504 /error/504.html
 <IfModule mod_expires.c>
 
     ExpiresActive On
-
 
     # -----------------------------------------------------
     # HTML
@@ -196,14 +202,13 @@ ErrorDocument 504 /error/504.html
     # -----------------------------------------------------
     # Static assets
     #
-    # Webpack hashed filenames:
-    # долгий immutable cache безопасен.
+    # Webpack обычно создаёт hashed filenames,
+    # поэтому долгий immutable cache безопасен.
     # -----------------------------------------------------
 
     <FilesMatch "\.(?:js|css)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
-
 
     <FilesMatch "\.(?:jpg|jpeg|png|gif|webp|avif|svg|woff|woff2)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
@@ -211,7 +216,7 @@ ErrorDocument 504 /error/504.html
 
 
     # -----------------------------------------------------
-    # HTML
+    # HTML не кэшируем надолго
     # -----------------------------------------------------
 
     <FilesMatch "\.(?:html)$">
@@ -282,4 +287,3 @@ ErrorDocument 504 /error/504.html
 # =========================================================
 
 DirectoryIndex index.html
-```

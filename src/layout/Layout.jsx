@@ -3,11 +3,7 @@ import { Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import { ModalState } from "../context/ModelContext";
-// import Footer from "../components/Footer";
 import Header from "../components/Header";
-// import CookieNotice from "../components/CookieNotice";
-// import ModalCallback from "../components/modal/ModalCallback";
-// import BtnScrollTop from "../components/button/BtnScrollTop";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SpinnerLoad from "../components/Spinner";
 
@@ -20,15 +16,18 @@ export default function Layout() {
   return (
     <ModalState>
       <Container fluid>
-        <CookieNotice />
         <Header />
         <Breadcrumbs />
+
         <Suspense fallback={<SpinnerLoad />}>
+          <CookieNotice />
+
           <Outlet />
+
+          <ModalCallback />
+          <BtnScrollTop />
+          <Footer />
         </Suspense>
-        <ModalCallback />
-        <BtnScrollTop />
-        <Footer />
       </Container>
     </ModalState>
   );

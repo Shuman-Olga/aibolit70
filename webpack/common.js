@@ -40,10 +40,6 @@ const plugins = [
     },
   }),
 
-  new webpack.ProvidePlugin({
-    React: "react",
-  }),
-
   new Dotenv({
     path: "./.env",
   }),
