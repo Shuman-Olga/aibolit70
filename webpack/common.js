@@ -60,7 +60,7 @@ module.exports = {
     filename: "js/[name].[contenthash].js",
   },
   performance: {
-    hints: "warning",
+    hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },

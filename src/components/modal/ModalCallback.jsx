@@ -51,9 +51,11 @@ export default function ModalCallback() {
 
   return (
     <div id="modalcallback">
-      <div className="callback-bt" onClick={handleShow}>
+      <div
+        className="callback-bt d-flex justify-content-center align-items-center"
+        onClick={handleShow}>
         <div className="text-call">
-          <Icon name="telephone" size={18} />
+          <Icon name="telephone" size={40} />
         </div>
       </div>
 

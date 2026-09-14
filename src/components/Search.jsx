@@ -4,7 +4,7 @@ import Icon from "./common/Icon";
 export default function Search() {
   return (
     <div id="search">
-      <form className="d-flex" method="get" action="/search">
+      <form className="d-flex" method="get" action="/search/">
         <input
           className="form-control me-2"
           type="search"

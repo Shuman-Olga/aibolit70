@@ -1,140 +1,112 @@
+```apache
+# =========================================================
+# AIBOLIT70.RU
+# Apache / Beget
+# React + react-snap
+# =========================================================
 
-# =========================
-# OPTIONS & CHARSET
-# =========================
+
+# =========================================================
+# OPTIONS
+# =========================================================
+
 Options -Indexes +FollowSymLinks
 AddDefaultCharset UTF-8
-AddCharset utf-8 .css .js .txt .json .rss .xml
 ServerSignature Off
 
-# =========================
-# REWRITE BASE
-# =========================
+
+# =========================================================
+# REWRITE
+# =========================================================
+
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
 
-# =========================
-# EXCLUDE ERROR PAGES
-# =========================
-RewriteCond %{REQUEST_URI} ^/error/
-RewriteRule ^ - [L]
+    RewriteEngine On
+    RewriteBase /
 
 
-# =========================
-# Убираем двойные слэши (// → /)
-# =========================
-RewriteCond %{REQUEST_URI} ^/(.+)//+(.*)$
-RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L]
+    # =====================================================
+    # ERROR PAGES
+    #
+    # Не переписываем страницы ошибок.
+    # =====================================================
 
-# -------------------------
-# ЕДИНЫЙ редирект:
-# HTTP → HTTPS
-# www → без www
-# -------------------------
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\.aibolit70\.ru$ [NC]
-RewriteRule ^ https://aibolit70.ru%{REQUEST_URI} [R=301,L]
-
-# -------------------------
-# Добавляем trailing slash (ВАЖНО!)
-# nginx уже это делает → не конфликтуем
-# -------------------------
-RewriteCond %{REQUEST_URI} !\.[^./]+$
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule ^(.*)$ https://aibolit70.ru/$1/ [R=301,L]
-
-# =========================
-# REDIRECT INDEX FILES
-# =========================
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*(index|default|main)\.(html|php|htm)\ HTTP/ [NC]
-RewriteRule ^(([^/]+/)*)(index|default|main)\.(html|php|htm)$ https://aibolit70.ru/$1 [R=301,L]
-
-# =========================
-# EXISTING FILES & FOLDERS
-# =========================
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+    RewriteRule ^error/ - [L]
 
 
+    # =====================================================
+    # HTTPS + WWW → NON-WWW
+    #
+    # Канонический домен:
+    # https://aibolit70.ru/
+    # =====================================================
 
-</IfModule>
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^aibolit70\.ru$ [NC]
+    RewriteRule ^ https://aibolit70.ru%{REQUEST_URI} [R=301,L]
 
-# =========================
-# CACHE
-# =========================
-<IfModule mod_expires.c>
-ExpiresActive On
 
-# HTML - no cache
-ExpiresByType text/html "access plus 0 seconds"
+    # =====================================================
+    # REMOVE DOUBLE SLASHES
+    # =====================================================
 
-# CSS/JS
-ExpiresByType text/css "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 month"
+    RewriteCond %{REQUEST_URI} ^/(.+)//+(.*)$
+    RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L]
 
-# Images
-ExpiresByType image/jpeg "access plus 1 year"
-ExpiresByType image/png "access plus 1 year"
-ExpiresByType image/gif "access plus 1 year"
-ExpiresByType image/svg+xml "access plus 1 year"
-ExpiresByType image/webp "access plus 1 year"
 
-# Fonts
-ExpiresByType font/woff "access plus 1 year"
-ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
+    # =====================================================
+    # REMOVE INDEX / DEFAULT / MAIN
+    #
+    # /index.html       → /
+    # /about/index.html → /about/
+    # =====================================================
 
-<IfModule mod_headers.c>
+    RewriteCond %{THE_REQUEST} \s/+(.*/)?(?:index|default|main)\.(?:html?|php)\s [NC]
+    RewriteRule ^(.*/)?(?:index|default|main)\.(?:html?|php)$ https://aibolit70.ru/$1 [R=301,L]
 
-    # HTTPS
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
-    # Security headers
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # =====================================================
+    # REAL FILES / REAL DIRECTORIES
+    #
+    # React-snap создаёт:
+    #
+    # /index.html
+    # /about/index.html
+    # /doctors/index.html
+    # /services/index.html
+    # ...
+    #
+    # Существующие файлы и директории отдаём напрямую.
+    # =====================================================
 
-    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+
+    # =====================================================
+    # ВАЖНО:
+    #
+    # НЕТ React SPA FALLBACK!
+    #
+    # НЕТ:
+    # RewriteRule ^ index.html [L]
+    #
+    # НЕТ:
+    # RewriteRule ^ - [R=404,L]
+    #
+    # Если файл/директория не существуют, Apache
+    # самостоятельно возвращает HTTP 404 и использует
+    # ErrorDocument 404 ниже.
+    # =====================================================
 
 </IfModule>
 
-# =========================
-# COMPRESSION
-# =========================
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
-AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript application/x-javascript
-</IfModule>
 
-# =========================
-# MIME TYPES
-# =========================
-<IfModule mod_mime.c>
-AddType application/javascript .js
-AddType application/json .json
-AddType text/css .css
-AddType image/svg+xml .svg
-AddType image/webp .webp
-AddType font/woff2 .woff2
-AddType font/woff .woff
-</IfModule>
+# =========================================================
+# ERROR DOCUMENTS
+# =========================================================
 
-# =========================
-# SECURITY & HIDDEN FILES
-# =========================
-<FilesMatch "^\.">
-Require all denied
-</FilesMatch>
-
-# =========================
-# DIRECTORY INDEX
-# =========================
-DirectoryIndex index.html
-
-# =========================
-# ERROR PAGES
-# =========================
 ErrorDocument 400 /error/400.html
 ErrorDocument 401 /error/401.html
 ErrorDocument 403 /error/403.html
@@ -144,3 +116,170 @@ ErrorDocument 502 /error/502.html
 ErrorDocument 503 /error/503.html
 ErrorDocument 504 /error/504.html
 
+
+# =========================================================
+# CACHE
+# =========================================================
+
+<IfModule mod_expires.c>
+
+    ExpiresActive On
+
+
+    # -----------------------------------------------------
+    # HTML
+    # -----------------------------------------------------
+
+    ExpiresByType text/html "access plus 0 seconds"
+
+
+    # -----------------------------------------------------
+    # CSS / JS
+    # -----------------------------------------------------
+
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+
+    # -----------------------------------------------------
+    # JSON / XML
+    # -----------------------------------------------------
+
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+
+
+    # -----------------------------------------------------
+    # Images
+    # -----------------------------------------------------
+
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+
+
+    # -----------------------------------------------------
+    # Fonts
+    # -----------------------------------------------------
+
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+
+</IfModule>
+
+
+# =========================================================
+# CACHE-CONTROL / SECURITY HEADERS
+# =========================================================
+
+<IfModule mod_headers.c>
+
+    # -----------------------------------------------------
+    # Security
+    # -----------------------------------------------------
+
+    Header always set X-Content-Type-Options "nosniff"
+
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+
+    # -----------------------------------------------------
+    # Static assets
+    #
+    # Webpack hashed filenames:
+    # долгий immutable cache безопасен.
+    # -----------------------------------------------------
+
+    <FilesMatch "\.(?:js|css)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+
+    <FilesMatch "\.(?:jpg|jpeg|png|gif|webp|avif|svg|woff|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+
+    # -----------------------------------------------------
+    # HTML
+    # -----------------------------------------------------
+
+    <FilesMatch "\.(?:html)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+</IfModule>
+
+
+# =========================================================
+# COMPRESSION
+# =========================================================
+
+<IfModule mod_deflate.c>
+
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+
+</IfModule>
+
+
+# =========================================================
+# MIME TYPES
+# =========================================================
+
+<IfModule mod_mime.c>
+
+    AddType text/html .html
+
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType text/css .css
+
+    AddType image/svg+xml .svg
+    AddType image/webp .webp
+    AddType image/avif .avif
+
+    AddType image/jpeg .jpg
+    AddType image/jpeg .jpeg
+    AddType image/png .png
+    AddType image/gif .gif
+
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+
+</IfModule>
+
+
+# =========================================================
+# HIDDEN FILES
+# =========================================================
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+
+# =========================================================
+# DIRECTORY INDEX
+# =========================================================
+
+DirectoryIndex index.html
+```
