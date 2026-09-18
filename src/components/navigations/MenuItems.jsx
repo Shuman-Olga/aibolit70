@@ -1,34 +1,29 @@
 import { NavLink } from "react-router-dom";
+
 import Dropdown from "./Dropdown";
-import { withSlash } from "../../data/constans";
+import { hasDropdown } from "./navigationUtils";
 
 export default function MenuItems({ items, onClick }) {
-  const hasChildren =
-    items.handle?.dropdown !== false && items.children?.some((c) => !c.index);
-  // const hasChildren = items.children?.some((c) => !c.index);
+  const showDropdown = hasDropdown(items);
+
   return (
-    <li className={`nav-item ${hasChildren ? "dropdown" : ""} d-flex `}>
-      <NavLink
-        to={withSlash(`/${items.path || ""}`)}
-        className="nav-link text-dark"
-        onClick={onClick}
-        // target="_top"
-        // rel="noopener noreferrer"
-      >
+    <li className={`nav-item ${showDropdown ? "dropdown" : ""} d-flex`}>
+      <NavLink to={items.to} className="nav-link text-dark" onClick={onClick}>
         {items.handle?.crumb}
       </NavLink>
 
-      {hasChildren && (
+      {showDropdown && (
         <>
           <button
+            type="button"
             id={`dropdown-${items.path}`}
-            className="btn dropdown-toggle dropdown-toggle-split ms-1 "
+            className="btn dropdown-toggle dropdown-toggle-split ms-1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            // target="_top"
-            // rel="noopener noreferrer"
-          >
-            <span className="visually-hidden">Toggle Dropdown</span>
+            aria-haspopup="true">
+            <span className="visually-hidden">
+              Открыть меню {items.handle?.crumb}
+            </span>
           </button>
 
           <Dropdown items={items} onClick={onClick} />

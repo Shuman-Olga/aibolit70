@@ -1,25 +1,25 @@
 import { NavLink } from "react-router-dom";
-import { withSlash } from "../../data/constans";
 
 export default function Dropdown({ items, onClick }) {
-  if (!items.children) return null;
+  const children =
+    items?.children?.filter(
+      (child) =>
+        !child.index && child.path !== "*" && child.handle?.nav !== false,
+    ) || [];
+
+  if (!children.length) {
+    return null;
+  }
 
   return (
     <ul className="dropdown-menu position-absolute">
-      {items.children
-        .filter((child) => !child.index)
-        .map((child) => (
-          <li key={child.path}>
-            <NavLink
-              className="dropdown-item"
-              // target="_top"
-              // rel="noopener noreferrer"
-              to={withSlash(`/${items.path}/${child.path}`)}
-              onClick={onClick}>
-              {child.handle?.crumb}
-            </NavLink>
-          </li>
-        ))}
+      {children.map((child) => (
+        <li key={child.to}>
+          <NavLink className="dropdown-item" to={child.to} onClick={onClick}>
+            {child.handle?.crumb}
+          </NavLink>
+        </li>
+      ))}
     </ul>
   );
 }
