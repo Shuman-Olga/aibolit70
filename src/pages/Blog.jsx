@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
 import { useState } from "react";
 
-import SeoPage from "../components/Seo";
 import BlogItem from "../components/blog/BlogItemPageBlog";
 import { dataBlog } from "../data/dataBlog";
 import MyPagination from "../components/PaginationBlog";
@@ -17,7 +16,6 @@ export default function Blog() {
 
   return (
     <Container id="blog" fluid>
-      <SeoPage page="blog" />
       <div className="page-h1">
         <Container>
           <h1>Блог</h1>

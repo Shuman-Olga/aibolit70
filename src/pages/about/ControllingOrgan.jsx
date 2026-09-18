@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import ControlingOrganItem from "../../components/about/ControlingOrganItem";
 import { dataControlingOrgan } from "../../data/dataControlingOrgan";
 import isReactSnap from "../../utilits/isReactSnap";
@@ -8,7 +7,6 @@ import isReactSnap from "../../utilits/isReactSnap";
 export default function ControllingOrgan() {
   return (
     <Container fluid id="controlling">
-      <SeoPage page="controlingorgan" />
       <div className="page-h1">
         <Container>
           <h1>Контролирующие организации</h1>

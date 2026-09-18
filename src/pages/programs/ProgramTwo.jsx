@@ -1,14 +1,13 @@
 import { Container } from "react-bootstrap";
 
 import BlockReklama1 from "../../components/reklama/BlockReklama1";
-import SeoPage from "../../components/Seo";
+
 import PDFItem from "../../components/PDFItem";
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function ProgramTwo() {
   return (
     <Container id="programtwo" fluid>
-      <SeoPage page="programtwo" />
       <div className="page-h1">
         <Container>
           <h1>Здоровый ребенок Хоум ( c 2-х до 5 лет)</h1>

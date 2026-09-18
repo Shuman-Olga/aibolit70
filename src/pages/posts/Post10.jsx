@@ -1,13 +1,11 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import BlockReklama2 from "../../components/reklama/BlockReklama2";
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post10() {
   return (
     <Container id="post" className="d-flex justify-content-center">
-      <SeoPage page="post10" />
       <div className="size-cont border">
         <h1 className="my-4">Чек-ап детский на дому</h1>
         <div>

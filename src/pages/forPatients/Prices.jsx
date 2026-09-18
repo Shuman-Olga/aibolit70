@@ -1,12 +1,10 @@
 import { Container, Table } from "react-bootstrap";
 
 import { dataPrices } from "../../data/dataPrices";
-import SeoPage from "../../components/Seo";
 
 export default function Prices() {
   return (
     <Container fluid id="prices">
-      <SeoPage page="prices" />
       <div className="page-h1">
         <Container>
           <h1>Стоимость услуг</h1>

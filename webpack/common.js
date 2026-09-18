@@ -39,10 +39,6 @@ const plugins = [
       type: "filesystem",
     },
   }),
-
-  new Dotenv({
-    path: "./.env",
-  }),
 ];
 
 module.exports = {

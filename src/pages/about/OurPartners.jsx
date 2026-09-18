@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function OurPartners() {
   return (
     <Container id="partners" fluid>
-      <SeoPage page="partners" />
       <div className="page-h1">
         <Container>
           <h1>Наши партнеры</h1>

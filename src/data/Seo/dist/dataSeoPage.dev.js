@@ -412,10 +412,10 @@ subpages page MedicinskaySpravka
     img: "helmets-for-special-needs.jpg",
   },
   /*
-subpages page ChekAp
+subpages page Chekup
 */
   {
-    namePage: "chekap",
+    namePage: "chekup",
     title: "Чек-апы для детей на дому 'Айболит' Томск",
     description:
       "Педиатрический Check-up на дому. Ознакомьтесь с программами клиник 'Айболит'",

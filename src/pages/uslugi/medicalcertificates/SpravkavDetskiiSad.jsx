@@ -2,13 +2,11 @@ import { Container } from "react-bootstrap";
 
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
-import SeoPage from "../../../components/Seo";
 import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavDetskiiSad() {
   return (
     <Container id="spravkavdetskiisad" fluid>
-      <SeoPage page="spravkavsad" />
       <div className="page-h1">
         <Container>
           <h1>Справка в детский сад</h1>

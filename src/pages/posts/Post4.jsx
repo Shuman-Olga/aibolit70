@@ -2,13 +2,12 @@ import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
-import SeoPage from "../../components/Seo";
+
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post4() {
   return (
     <Container id="post" className="d-flex justify-content-center">
-      <SeoPage page="post4" />
       <div className="size-cont border mb-4">
         <h1 className="my-4">ПАТРОНАЖ НОВОРОЖДЕННОГО ребёнка</h1>
         <div>

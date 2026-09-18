@@ -1,13 +1,11 @@
 import { Container } from "react-bootstrap";
 
 import isReactSnap from "../utilits/isReactSnap";
-import SeoPage from "../components/Seo";
 import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function Contacts() {
   return (
     <Container id="contacts" fluid>
-      <SeoPage page="contacts" />
       <div className="page-h1">
         <Container>
           <h1>ООО "Айболит" Детская медицинская служба - Kонтакты</h1>

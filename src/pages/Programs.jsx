@@ -1,14 +1,12 @@
 import { Container } from "react-bootstrap";
 
 import BlockReklama1 from "../components/reklama/BlockReklama1";
-import SeoPage from "../components/Seo";
 import ProgramItem from "../components/programs/ProgramItemPagePrograms";
 import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function Programs() {
   return (
     <Container id="programs" fluid>
-      <SeoPage page="programs" />
       <div className="page-h1">
         <Container>
           <h1>Программы наблюдения за здоровьем ребенка</h1>

@@ -1,13 +1,11 @@
 import { Container } from "react-bootstrap";
 
 import BlockReklama2 from "../../components/reklama/BlockReklama2";
-import SeoPage from "../../components/Seo";
 import SpravkiItem from "../../components/uslugi/SpravkiItem";
 
 export default function MedicalCertificates() {
   return (
     <Container id="medical-certificates" fluid>
-      <SeoPage page="spravki" />
       <div className="page-h1">
         <Container>
           <h1>Медицинские справки ребенку</h1>

@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../components/Seo";
 import ChekUpItem from "../components/ChekUpItem";
 import BlockReklama2 from "../components/reklama/BlockReklama2";
 import OptimizedImage from "../components/common/OptimizedImage";
@@ -8,7 +7,6 @@ import OptimizedImage from "../components/common/OptimizedImage";
 export default function ChekUp() {
   return (
     <Container id="chek-up" fluid>
-      <SeoPage page="chekap" />
       <div className="page-h1">
         <Container>
           <h1>Чек-апы (медицинские осмотры)</h1>

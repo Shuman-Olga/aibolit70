@@ -2,13 +2,11 @@ import { Container } from "react-bootstrap";
 
 import BlockReklama1 from "../../../components/reklama/BlockReklama1";
 import BlockReklama2 from "../../../components/reklama/BlockReklama2";
-import SeoPage from "../../../components/Seo";
 import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SanatornoKurortnayaKarta() {
   return (
     <Container fluid>
-      <SeoPage page="sanatornokurortnayakarta" />
       <div className="page-h1">
         <Container>
           <h1>Санаторно-курортная карта для детей</h1>

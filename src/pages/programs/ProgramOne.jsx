@@ -1,14 +1,13 @@
 import { Container, Tab, Tabs } from "react-bootstrap";
 
 import BlockReklama1 from "../../components/reklama/BlockReklama1";
-import SeoPage from "../../components/Seo";
+
 import PDFItem from "../../components/PDFItem";
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function ProgramOne() {
   return (
     <Container id="programone" fluid>
-      <SeoPage page="programone" />
       <div className="page-h1">
         <Container>
           <h1>Малыш Хоум ( от 0 до 2-х лет)</h1>

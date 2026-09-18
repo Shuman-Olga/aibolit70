@@ -1,11 +1,8 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
-
 export default function PravilaPodgotovkiIssledovaniyam() {
   return (
     <Container fluid id="pravila" className="mb-3">
-      <SeoPage page="pravilapodgotovkiissledovaniyam" />
       <div className="page-h1">
         <Container>
           <h1>Правила подготовки к исследованиям</h1>

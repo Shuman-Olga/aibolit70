@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
@@ -9,7 +8,6 @@ import OptimizedImage from "../../components/common/OptimizedImage";
 export default function Post3() {
   return (
     <Container id="post" className="d-flex justify-content-center">
-      <SeoPage page="post3" />
       <div className="size-cont border mb-3">
         <h1 className="my-4">ДЕТСКИЙ ХИРУРГ на дом</h1>
         <div>

@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function SposobyOplaty() {
   return (
     <Container fluid id="page2">
-      <SeoPage page="sposobyoplaty" />
       <div className="page-h1">
         <Container>
           <h1>Способы оплаты</h1>

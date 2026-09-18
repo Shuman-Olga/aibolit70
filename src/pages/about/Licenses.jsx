@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import PDFItem from "../../components/PDFItem";
 
 export default function Licenses() {
   return (
     <Container fluid id="licenses">
-      <SeoPage page="licenses" />
       <div className="page-h1">
         <Container>
           <h1>Лицензии</h1>

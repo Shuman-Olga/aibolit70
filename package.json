@@ -26,8 +26,10 @@
   "scripts": {
     "start": "webpack serve --open --config webpack/dev.js",
     "optimize-images": "node scripts/optimize-images.js",
+    "sitemap": "node scripts/generate-sitemap.js",
     "build": "webpack --config webpack/prod.js",
     "build:snap": "npm run build && react-snap",
+    "build:seo": "npm run build && npm run sitemap && react-snap",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },

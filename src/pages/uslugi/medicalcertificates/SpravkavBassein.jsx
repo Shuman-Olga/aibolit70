@@ -4,13 +4,11 @@ import BlockReklama2 from "../../../components/reklama/BlockReklama2";
 import BlockReklama3 from "../../../components/reklama/BlockReklama3";
 import BlockReklama4 from "../../../components/reklama/BlockReklama4";
 
-import SeoPage from "../../../components/Seo";
 import OptimizedImage from "../../../components/common/OptimizedImage";
 
 export default function SpravkavBassein() {
   return (
     <Container id="spravkavbassein" fluid>
-      <SeoPage page="spravkavbassein" />
       <div className="page-h1">
         <Container>
           <h1>Справка в бассейн для ребенка</h1>

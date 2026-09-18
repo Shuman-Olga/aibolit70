@@ -2,12 +2,10 @@ import { Container } from "react-bootstrap";
 
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
 import BlockReklama1 from "../../components/reklama/BlockReklama1";
-import SeoPage from "../../components/Seo";
 
 export default function Pediatr() {
   return (
     <Container id="doctornadom" fluid>
-      <SeoPage page="pediator" />
       <div className="page-h1">
         <Container>
           <h1>Педиатр в Томске</h1>

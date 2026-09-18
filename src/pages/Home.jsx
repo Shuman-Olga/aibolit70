@@ -1,8 +1,6 @@
 import { Container } from "react-bootstrap";
 import React from "react";
 
-import SeoPage from "../components/Seo";
-
 const BlockImg = React.lazy(() => import("../components/home/BlockImg"));
 const BlockInfo = React.lazy(() => import("../components/home/BlockInfo"));
 const BlockAdvantages = React.lazy(
@@ -21,7 +19,6 @@ const BlockContacts = React.lazy(
 export default function Home() {
   return (
     <Container fluid id="home">
-      <SeoPage page="home" />
       {/* <WorkOnHolidays /> */}
       <BlockImg />
       {/* <Banner /> */}

@@ -1,13 +1,12 @@
 import { Container } from "react-bootstrap";
 
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
-import SeoPage from "../../components/Seo";
+
 import OptimizedImage from "../../components/common/OptimizedImage";
 
 export default function Post2() {
   return (
     <Container id="post" fluid>
-      <SeoPage page="post2" />
       <Container className="d-flex justify-content-center">
         <div className="size-cont border mb-4">
           <h1 className="my-4">Календарь вакцинаций</h1>

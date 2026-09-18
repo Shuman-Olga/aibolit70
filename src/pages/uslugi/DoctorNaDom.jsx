@@ -1,14 +1,12 @@
 import { Container } from "react-bootstrap";
 
 import BlockReklama3 from "../../components/reklama/BlockReklama3";
-import SeoPage from "../../components/Seo";
 import ModalWindows from "../../components/modal/Modal";
 import FormCallingDoctor from "../../components/modal/FormСalling";
 
 export default function DoctorNaDom() {
   return (
     <Container id="doctornadom" fluid>
-      <SeoPage page="doctornadom" />
       <div className="page-h1">
         <Container>
           <h1>Вызов педиатра на дом в Томске</h1>

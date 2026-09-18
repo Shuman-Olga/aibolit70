@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
 import PDFItem from "../../components/PDFItem";
-import SeoPage from "../../components/Seo";
 
 export default function LekarstvennoeObespechenie() {
   return (
     <Container fluid id="lekarstvo" className="mb-3">
-      <SeoPage page="lekarstvo" />
       <div className="page-h1">
         <Container>
           <h1>Лекарственное обеспечение</h1>

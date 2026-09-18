@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import { NavLink } from "react-router-dom";
 
 export default function SvedeniyaSpecialistah() {
   return (
     <Container fluid id="page2">
-      <SeoPage page="svedeniyaspecialistah" />
       <div className="page-h1">
         <Container>
           <h1>Сведения о специалистах</h1>

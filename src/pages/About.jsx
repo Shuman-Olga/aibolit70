@@ -1,13 +1,11 @@
 import { Container } from "react-bootstrap";
 
 import BlockAdvantages from "../components/home/BlockAdvantages";
-import SeoPage from "../components/Seo";
 import OptimizedImage from "../components/common/OptimizedImage";
 
 export default function About() {
   return (
     <Container fluid id="about">
-      <SeoPage page="about" />
       <div className="page-h1">
         <Container>
           <h1>О нас</h1>

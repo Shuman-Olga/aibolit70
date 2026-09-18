@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
 
-import SeoPage from "../../components/Seo";
 import PDFItem from "../../components/PDFItem";
 
 export default function NalogovyjVychet() {
   return (
     <Container fluid id="nalogovyjvychet" className="mb-3">
-      <SeoPage page="nalogovyjvychet" />
       <div className="page-h1">
         <Container>
           <h1>Налоговый вычет</h1>
