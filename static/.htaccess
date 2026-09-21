@@ -20,7 +20,7 @@ ServerSignature Off
 
 <IfModule mod_rewrite.c>
 
-    RewriteEngine On
+      RewriteEngine On
     RewriteBase /
 
 
@@ -34,6 +34,7 @@ ServerSignature Off
 
     # =====================================================
     # HTTPS + WWW → NON-WWW
+    #
     # Канонический домен:
     # https://aibolit70.ru/
     # =====================================================
@@ -44,18 +45,38 @@ ServerSignature Off
 
 
     # =====================================================
-    # REMOVE DOUBLE SLASHES
+    # NORMALIZE DOUBLE SLASHES
     # =====================================================
 
-    RewriteCond %{REQUEST_URI} ^/(.+)//+(.*)$
-    RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L]
+    # -----------------------------------------------------
+    # Двойной слэш сразу после домена
+    #
+    # //uslugi-i-ceny/
+    #        ↓ 301
+    # /uslugi-i-ceny/
+    # -----------------------------------------------------
+
+    RewriteCond %{REQUEST_URI} ^//+(.*)$
+    RewriteRule ^ https://aibolit70.ru/%1 [R=301,L,NE]
+
+
+    # -----------------------------------------------------
+    # Двойной слэш внутри URL
+    #
+    # /uslugi//i-ceny/
+    #        ↓ 301
+    # /uslugi/i-ceny/
+    # -----------------------------------------------------
+
+    RewriteCond %{REQUEST_URI} ^/(.*)//+(.*)$
+    RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L,NE]
 
 
     # =====================================================
     # TRAILING SLASH
     #
     # Добавляем / только для URL-маршрутов.
-    # Файлы (.html, .css, .js, .png и т.д.) не затрагиваем.
+    # Реальные файлы не затрагиваем.
     # =====================================================
 
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -74,9 +95,6 @@ ServerSignature Off
 
     # =====================================================
     # REAL FILES / REAL DIRECTORIES
-    #
-    # Если файл или директория реально существуют,
-    # Apache отдаёт их напрямую.
     # =====================================================
 
     RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -87,11 +105,7 @@ ServerSignature Off
     # =====================================================
     # UNKNOWN URL → REAL HTTP 404
     #
-    # ВАЖНО:
-    # Здесь НЕТ React SPA fallback.
-    #
-    # Несуществующий URL должен получить HTTP 404,
-    # а не index.html со статусом 200.
+    # React SPA fallback отсутствует намеренно.
     # =====================================================
 
     RewriteRule ^ - [R=404,L]

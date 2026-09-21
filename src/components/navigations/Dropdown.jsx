@@ -4,7 +4,7 @@ export default function Dropdown({ items, onClick }) {
   const children =
     items?.children?.filter(
       (child) =>
-        !child.index && child.path !== "*" && child.handle?.nav !== false,
+        !child.index && child.path !== "*" && child.handle?.nav === true,
     ) || [];
 
   if (!children.length) {
@@ -12,10 +12,10 @@ export default function Dropdown({ items, onClick }) {
   }
 
   return (
-    <ul className="dropdown-menu position-absolute">
+    <ul className="dropdown-menu">
       {children.map((child) => (
         <li key={child.to}>
-          <NavLink className="dropdown-item" to={child.to} onClick={onClick}>
+          <NavLink to={child.to} className="dropdown-item" onClick={onClick}>
             {child.handle?.crumb}
           </NavLink>
         </li>

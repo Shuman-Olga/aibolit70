@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import React from "react";
 
-const BlockImg = React.lazy(() => import("../components/home/BlockImg"));
+import BlockImg from "../components/home/BlockImg";
 const BlockInfo = React.lazy(() => import("../components/home/BlockInfo"));
 const BlockAdvantages = React.lazy(
   () => import("../components/home/BlockAdvantages"),

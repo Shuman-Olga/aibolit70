@@ -10,12 +10,12 @@ export default function BlockInfo() {
         <div className="d-flex justify-content-around">
           <OptimizedImage
             src={"foto_1000w.jpg"}
-            alt="foto"
+            alt="Педиатрическая медицинская служба Айболит в Томске"
             width={650}
             height={550}
-            loading="eager"
-            fetchPriority="high"
-            title="foto"
+            loading="lazy"
+            decoding="async"
+            title="Педиатры Айболит"
             className="img-foto me-3"
           />
 

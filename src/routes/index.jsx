@@ -39,30 +39,44 @@ const componentLoaders = {
   DoctorNaDom: () => import("../pages/uslugi/DoctorNaDom"),
   Pediatr: () => import("../pages/uslugi/Pediatr"),
   MedicalCertificates: () => import("../pages/uslugi/MedicalCertificates"),
+
   SanatornoKurortnayaKarta: () =>
     import("../pages/uslugi/medicalcertificates/SanatornoKurortnayaKarta"),
+
   SpravkavShkolu: () =>
     import("../pages/uslugi/medicalcertificates/SpravkavShkolu"),
+
   SpravkavDetskiiSad: () =>
     import("../pages/uslugi/medicalcertificates/SpravkavDetskiiSad"),
+
   SpravkavBassein: () =>
     import("../pages/uslugi/medicalcertificates/SpravkavBassein"),
+
   SpravkavZdorove: () =>
     import("../pages/uslugi/medicalcertificates/SpravkaZdorove"),
+
   SpravkaForma026u: () =>
     import("../pages/uslugi/medicalcertificates/SpravkaForma026u"),
+
   MedicinskayaSpravka079u: () =>
     import("../pages/uslugi/medicalcertificates/MedicinskayaSpravka079u"),
 
   ForPatients: () => import("../pages/ForPatients"),
+
   Prices: () => import("../pages/forPatients/Prices"),
+
   SposobyOplaty: () => import("../pages/forPatients/SposobyOplaty"),
+
   LekarstvennoeObespechenie: () =>
     import("../pages/forPatients/LekarstvennoeObespechenie"),
+
   PravilaPodgotovki: () => import("../pages/forPatients/PravilaPodgotovki"),
+
   SvedeniyaSpecialistah: () =>
     import("../pages/forPatients/SvedeniyaSpecialistah"),
+
   NalogovyjVychet: () => import("../pages/forPatients/NalogovyjVychet"),
+
   Otzyvy: () => import("../pages/forPatients/Otzyvy"),
 
   Blog: () => import("../pages/Blog"),
@@ -81,6 +95,7 @@ const componentLoaders = {
   Post12: () => import("../pages/posts/Post12"),
 
   Contacts: () => import("../pages/Сontacts"),
+
   SearchPage: () => import("../pages/SearchPage"),
 };
 
@@ -105,34 +120,88 @@ function getComponent(componentName) {
 }
 
 // =========================================================
-// BUILD ROUTE
+// PATH
 // =========================================================
 
-function buildRoute(route) {
-  const result = {
-    handle: route.handle,
-  };
-
-  if (route.path !== undefined) {
-    result.path = route.path;
+function normalizePath(path = "") {
+  if (!path || path === "/") {
+    return "/";
   }
 
-  if (route.index) {
-    result.index = true;
+  return String(path).replace(/^\/+/, "").replace(/\/+$/, "");
+}
+
+function joinPaths(parentPath = "", currentPath = "") {
+  const current = String(currentPath || "").trim();
+
+  if (!current || current === "/") {
+    return parentPath || "/";
   }
 
-  if (route.component) {
-    const Component = getComponent(route.component);
-    result.element = <Component />;
+  const parent = normalizePath(parentPath);
+  const child = normalizePath(current);
+
+  if (!parent || parent === "/") {
+    return `/${child}/`;
   }
 
-  if (route.errorElement) {
-    const ErrorComponent = getComponent(route.errorElement);
-    result.errorElement = <ErrorComponent />;
-  }
+  return `/${parent}/${child}/`;
+}
 
-  if (route.children && route.children.length > 0) {
-    result.children = route.children.map(buildRoute);
+// =========================================================
+// FLATTEN ROUTES
+// =========================================================
+//
+// ВАЖНО:
+//
+// routeConfig хранит иерархию для:
+// - sitemap
+// - navigation
+// - SEO
+//
+// Но React Router здесь получает ПЛОСКИЕ маршруты.
+//
+// Поэтому:
+//
+// /o-nas/
+// /o-nas/licenzii/
+// /o-nas/documents/
+//
+// являются самостоятельными React Router routes.
+//
+
+function flattenRoutes(routes = [], parentPath = "") {
+  const result = [];
+
+  for (const route of routes) {
+    if (!route) {
+      continue;
+    }
+
+    const fullPath = joinPaths(parentPath, route.path);
+
+    const routerRoute = {
+      path: fullPath,
+      handle: route.handle,
+    };
+
+    if (route.component) {
+      const Component = getComponent(route.component);
+
+      routerRoute.element = <Component />;
+    }
+
+    if (route.errorElement) {
+      const ErrorComponent = getComponent(route.errorElement);
+
+      routerRoute.errorElement = <ErrorComponent />;
+    }
+
+    result.push(routerRoute);
+
+    if (Array.isArray(route.children) && route.children.length > 0) {
+      result.push(...flattenRoutes(route.children, fullPath));
+    }
   }
 
   return result;
@@ -143,13 +212,13 @@ function buildRoute(route) {
 // =========================================================
 
 const rootRoute = {
-  path: "/",
   element: <Layout />,
   errorElement: <ErrorPage />,
   handle: {
     crumb: "Главная",
   },
-  children: routeConfig.map(buildRoute),
+
+  children: flattenRoutes(routeConfig),
 };
 
 // =========================================================

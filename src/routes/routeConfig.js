@@ -1,13 +1,3 @@
-/**
- * ЕДИНЫЙ ИСТОЧНИК МАРШРУТОВ
- *
- * ВАЖНО:
- * - здесь НЕТ React;
- * - здесь НЕТ JSX;
- * - файл можно читать как из браузерного webpack, так и из Node.js;
- * - sitemap, react-snap и SEO checker используют этот же конфиг.
- */
-
 const routeConfig = [
   // =========================================================
   // ГЛАВНАЯ
@@ -58,6 +48,7 @@ const routeConfig = [
         component: "ControllingOrgan",
         handle: {
           crumb: "Контролирующие организации",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Контролирующие организации | Айболит, Томск",
@@ -74,6 +65,7 @@ const routeConfig = [
         component: "Licenses",
         handle: {
           crumb: "Лицензии",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Лицензия на медицинскую деятельность | Айболит, Томск",
@@ -91,6 +83,7 @@ const routeConfig = [
         handle: {
           crumb: "Документы",
           sitemap: true,
+          nav: true,
           seo: {
             title: "Документы детской медицинской службы «Айболит» | Томск",
             description:
@@ -106,6 +99,8 @@ const routeConfig = [
         component: "OurPartners",
         handle: {
           crumb: "Наши партнеры",
+          nav: true,
+
           sitemap: true,
           seo: {
             title: "Наши партнеры | Айболит в Томске",
@@ -121,6 +116,7 @@ const routeConfig = [
         component: "PravovyInformation",
         handle: {
           crumb: "Правовая информация",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Правовая информация | Айболит в Томске",
@@ -136,6 +132,7 @@ const routeConfig = [
         component: "Vacancies",
         handle: {
           crumb: "Вакансии",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Вакансии в детской медицинской службе «Айболит» | Томск",
@@ -151,6 +148,7 @@ const routeConfig = [
         component: "MapSite",
         handle: {
           crumb: "Карта сайта",
+          nav: true,
           sitemap: false,
           seo: {
             title: "Карта сайта детской медицинской службы «Айболит»",
@@ -191,6 +189,7 @@ const routeConfig = [
         component: "DoctorSadovnikova",
         handle: {
           crumb: "Садовникова Елена Геннадьевна",
+          nav: true,
           sitemap: true,
           seo: {
             title:
@@ -208,6 +207,7 @@ const routeConfig = [
         component: "DoctorPetuhova",
         handle: {
           crumb: "Петухова Ольга Викторовна",
+          nav: true,
           sitemap: true,
           seo: {
             title:
@@ -225,6 +225,7 @@ const routeConfig = [
         component: "DoctorShevchenko",
         handle: {
           crumb: "Шевченко Анастасия Николаевна",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Шевченко Анастасия Николаевна — педиатр | Айболит",
@@ -240,6 +241,7 @@ const routeConfig = [
         component: "DoctorOstrouhova",
         handle: {
           crumb: "Остроухова Наталья Петровна",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Остроухова Наталья Петровна — педиатр | Айболит",
@@ -279,6 +281,7 @@ const routeConfig = [
         component: "ProgramOne",
         handle: {
           crumb: "Малыш Хоум от 0 до 2 лет",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Программа «Малыш Хоум» от 0 до 2 лет | Айболит",
@@ -293,6 +296,7 @@ const routeConfig = [
         component: "ProgramTwo",
         handle: {
           crumb: "Здоровый ребенок с 2 до 5 лет",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Программа «Здоровый ребенок» от 2 до 5 лет | Айболит",
@@ -307,6 +311,7 @@ const routeConfig = [
         component: "ProgramThree",
         handle: {
           crumb: "Педиатр рядом с 5 лет",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Программа наблюдения за ребенком | Айболит, Томск",
@@ -368,6 +373,7 @@ const routeConfig = [
         component: "DoctorNaDom",
         handle: {
           crumb: "Врач на дом",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Вызов педиатра на дом в Томске | Айболит",
@@ -384,6 +390,7 @@ const routeConfig = [
         component: "Pediatr",
         handle: {
           crumb: "Педиатры",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Педиатр на дом в Томске | Айболит",
@@ -400,6 +407,7 @@ const routeConfig = [
         component: "MedicalCertificates",
         handle: {
           crumb: "Справки",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Медицинские справки для ребенка в Томске | Айболит",
@@ -539,6 +547,7 @@ const routeConfig = [
         component: "Prices",
         handle: {
           crumb: "Цены",
+          nav: true,
           sitemap: true,
           seo: {
             title:
@@ -554,6 +563,7 @@ const routeConfig = [
         component: "SposobyOplaty",
         handle: {
           crumb: "Способы оплаты",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Способы оплаты | Айболит Томск",
@@ -568,6 +578,7 @@ const routeConfig = [
         component: "LekarstvennoeObespechenie",
         handle: {
           crumb: "Лекарственное обеспечение",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Лекарственное обеспечение | Айболит Томск",
@@ -582,6 +593,7 @@ const routeConfig = [
         component: "PravilaPodgotovki",
         handle: {
           crumb: "Правила подготовки к исследованиям",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Правила подготовки к исследованиям | Айболит",
@@ -596,6 +608,7 @@ const routeConfig = [
         component: "SvedeniyaSpecialistah",
         handle: {
           crumb: "Сведения о специалистах",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Сведения о специалистах | Айболит Томск",
@@ -610,6 +623,7 @@ const routeConfig = [
         component: "NalogovyjVychet",
         handle: {
           crumb: "Налоговый вычет",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Налоговый вычет за медицинские услуги | Айболит",
@@ -624,6 +638,7 @@ const routeConfig = [
         component: "Otzyvy",
         handle: {
           crumb: "Отзывы",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Отзывы о детской медицинской службе «Айболит» | Томск",
@@ -662,6 +677,7 @@ const routeConfig = [
         component: "Post1",
         handle: {
           crumb: "Детский невролог",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Детский невролог на дом в Томске | Айболит",
@@ -678,6 +694,7 @@ const routeConfig = [
         component: "Post2",
         handle: {
           crumb: "Календарь вакцинаций",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Календарь вакцинации детей | Айболит, Томск",
@@ -694,6 +711,7 @@ const routeConfig = [
         component: "Post3",
         handle: {
           crumb: "Детский хирург",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Детский хирург на дом в Томске | Айболит",
@@ -709,6 +727,7 @@ const routeConfig = [
         component: "Post4",
         handle: {
           crumb: "Патронаж новорожденного",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Патронаж новорожденного на дому в Томске | Айболит",
@@ -725,6 +744,7 @@ const routeConfig = [
         component: "Post5",
         handle: {
           crumb: "Адаптация в детском саду",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Адаптация ребенка к детскому саду | Айболит",
@@ -740,6 +760,7 @@ const routeConfig = [
         component: "Post6",
         handle: {
           crumb: "Как помочь ребенку перенести жару",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Как помочь ребенку перенести жару | Айболит",
@@ -755,6 +776,7 @@ const routeConfig = [
         component: "Post7",
         handle: {
           crumb: "Детский ЛОР врач на дом",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Детский ЛОР на дом в Томске | Айболит",
@@ -770,6 +792,7 @@ const routeConfig = [
         component: "Post8",
         handle: {
           crumb: "Вызов педиатра на дом",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Вызов педиатра на дом в Томске | Айболит",
@@ -785,6 +808,7 @@ const routeConfig = [
         component: "Post9",
         handle: {
           crumb: "Пентаксим",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Пентаксим — вакцинация детей | Айболит, Томск",
@@ -800,6 +824,7 @@ const routeConfig = [
         component: "Post10",
         handle: {
           crumb: "Чек-ап детский на дому",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Комплексный осмотр ребенка на дому в Томске | Айболит",
@@ -815,6 +840,7 @@ const routeConfig = [
         component: "Post11",
         handle: {
           crumb: "Советы врача-аллерголога",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Советы детского аллерголога | Айболит, Томск",
@@ -830,6 +856,7 @@ const routeConfig = [
         component: "Post12",
         handle: {
           crumb: "Внимание, поллиноз!",
+          nav: true,
           sitemap: true,
           seo: {
             title: "Поллиноз у детей: симптомы и рекомендации | Айболит",

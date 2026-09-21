@@ -1,121 +1,97 @@
 const fs = require("fs");
 const path = require("path");
 
-const routeConfig = require("../src/routes/routeConfig");
+const projectRoot = path.resolve(__dirname, "..");
 
-const ROOT_DIR = path.resolve(__dirname, "..");
-const PUBLIC_DIR = path.join(ROOT_DIR, "public");
-const SITEMAP_FILE = path.join(PUBLIC_DIR, "sitemap.xml");
-const PACKAGE_FILE = path.join(ROOT_DIR, "package.json");
+const routeConfigPath = path.join(
+  projectRoot,
+  "src",
+  "routes",
+  "routeConfig.js",
+);
+
+const sitemapPath = path.join(projectRoot, "public", "sitemap.xml");
 
 const SITE_URL = "https://aibolit70.ru";
 
 function normalizePath(value = "") {
-  if (!value) {
+  return String(value)
+    .trim()
+    .replace(/\/+/g, "/")
+    .replace(/^\/+/, "")
+    .replace(/\/+$/, "");
+}
+
+function joinPaths(parentPath = "", childPath = "") {
+  const parent = normalizePath(parentPath);
+  const child = normalizePath(childPath);
+
+  if (!parent && !child) {
     return "/";
   }
 
-  let result = value.replace(/\\/g, "/");
-
-  if (!result.startsWith("/")) {
-    result = `/${result}`;
-  }
-
-  result = result.replace(/\/+/g, "/");
-
-  if (result !== "/" && !result.endsWith("/")) {
-    result += "/";
-  }
-
-  return result;
+  return `/${[parent, child].filter(Boolean).join("/")}/`;
 }
 
-function joinPaths(parentPath, childPath) {
-  if (!childPath) {
-    return normalizePath(parentPath);
+function loadRouteConfig() {
+  delete require.cache[require.resolve(routeConfigPath)];
+
+  const routeConfig = require(routeConfigPath);
+
+  if (!Array.isArray(routeConfig)) {
+    throw new Error("routeConfig.js должен экспортировать массив маршрутов.");
   }
 
-  if (childPath.startsWith("/")) {
-    return normalizePath(childPath);
-  }
-
-  return normalizePath(
-    `${parentPath.replace(/\/+$/, "")}/${childPath.replace(/^\/+/, "")}`,
-  );
+  return routeConfig;
 }
 
-function isExcluded(route, fullPath) {
-  const normalized = normalizePath(fullPath);
-
-  if (route.sitemap === false) {
-    return true;
-  }
-
-  if (route.handle?.sitemap === false) {
-    return true;
-  }
-
-  if (route.handle?.seo?.robots?.includes("noindex")) {
-    return true;
-  }
-
-  if (normalized.startsWith("/search/")) {
-    return true;
-  }
-
-  if (normalized.startsWith("/error/")) {
-    return true;
-  }
-
-  if (normalized.includes(":")) {
-    return true;
-  }
-
-  if (normalized.includes("*")) {
-    return true;
-  }
-
-  return false;
-}
-
-function collectRoutes(routes, parentPath = "") {
-  const result = [];
-
+function collectRoutes(routes, parentPath = "", result = []) {
   for (const route of routes) {
-    const currentPath = joinPaths(parentPath, route.path || "");
+    if (!route || typeof route !== "object") {
+      continue;
+    }
 
-    /*
-     * Если это полноценная страница с component,
-     * добавляем URL в sitemap.
-     */
-    if (route.component && !isExcluded(route, currentPath)) {
+    if (route.path === "*") {
+      continue;
+    }
+
+    if (route.handle?.sitemap === false) {
+      continue;
+    }
+
+    if (route.handle?.robots === "noindex") {
+      continue;
+    }
+
+    const currentPath = route.index
+      ? joinPaths(parentPath)
+      : joinPaths(parentPath, route.path);
+
+    if (route.path !== "*" && (route.index || route.path)) {
       result.push({
-        url: currentPath,
+        path: currentPath,
         lastmod: route.handle?.seo?.lastmod || null,
       });
     }
 
-    /*
-     * Рекурсивно обрабатываем children.
-     */
-    if (Array.isArray(route.children) && route.children.length > 0) {
-      result.push(...collectRoutes(route.children, currentPath));
+    if (Array.isArray(route.children)) {
+      collectRoutes(route.children, currentPath, result);
     }
   }
 
   return result;
 }
 
-function removeDuplicates(routes) {
+function uniqueRoutes(routes) {
   const map = new Map();
 
   for (const route of routes) {
-    if (!map.has(route.url)) {
-      map.set(route.url, route);
+    if (!map.has(route.path)) {
+      map.set(route.path, route);
     }
   }
 
-  return Array.from(map.values());
+  return [...map.values()];
 }
 
 function escapeXml(value) {
@@ -129,21 +105,17 @@ function escapeXml(value) {
 
 function createSitemap(routes) {
   const urls = routes
-    .map(({ url, lastmod }) => {
-      const loc = `${SITE_URL}${url}`;
+    .map(({ path: routePath, lastmod }) => {
+      const loc =
+        routePath === "/" ? `${SITE_URL}/` : `${SITE_URL}${routePath}`;
 
-      if (lastmod) {
-        return [
-          "  <url>",
-          `    <loc>${escapeXml(loc)}</loc>`,
-          `    <lastmod>${escapeXml(lastmod)}</lastmod>`,
-          "  </url>",
-        ].join("\n");
-      }
+      const lastmodXml = lastmod
+        ? `\n    <lastmod>${escapeXml(lastmod)}</lastmod>`
+        : "";
 
-      return ["  <url>", `    <loc>${escapeXml(loc)}</loc>`, "  </url>"].join(
-        "\n",
-      );
+      return `  <url>
+    <loc>${escapeXml(loc)}</loc>${lastmodXml}
+  </url>`;
     })
     .join("\n");
 
@@ -156,112 +128,24 @@ ${urls}
 `;
 }
 
-function updateReactSnapInclude(routes) {
-  if (!fs.existsSync(PACKAGE_FILE)) {
-    throw new Error("package.json не найден.");
-  }
-
-  const packageJson = JSON.parse(fs.readFileSync(PACKAGE_FILE, "utf8"));
-
-  if (!packageJson.reactSnap) {
-    packageJson.reactSnap = {};
-  }
-
-  packageJson.reactSnap.include = routes.map((route) => route.url);
-
-  fs.writeFileSync(
-    PACKAGE_FILE,
-    `${JSON.stringify(packageJson, null, 2)}\n`,
-    "utf8",
-  );
-}
-
-function validateRoutes(routes) {
-  const errors = [];
-
-  const urls = routes.map((route) => route.url);
-
-  const duplicates = urls.filter((url, index) => urls.indexOf(url) !== index);
-
-  if (duplicates.length > 0) {
-    errors.push(`Дублирующиеся URL:\n${[...new Set(duplicates)].join("\n")}`);
-  }
-
-  for (const url of urls) {
-    if (url !== "/" && !url.endsWith("/")) {
-      errors.push(`URL без завершающего слеша: ${url}`);
-    }
-
-    if (url.includes("//")) {
-      errors.push(`URL содержит двойной слеш: ${url}`);
-    }
-
-    const segments = url.split("/").filter(Boolean);
-
-    for (let i = 1; i < segments.length; i += 1) {
-      if (segments[i] === segments[i - 1]) {
-        errors.push(`Повторяющийся сегмент: ${url}`);
-      }
-    }
-  }
-
-  if (errors.length > 0) {
-    throw new Error(`Ошибка проверки sitemap:\n\n${errors.join("\n")}`);
-  }
-}
-
 function main() {
-  console.log("==============================================");
-  console.log("AIBOLIT SITEMAP GENERATOR");
-  console.log("==============================================");
+  console.log("========================================");
+  console.log("GENERATE SITEMAP");
+  console.log("========================================");
 
-  const collected = collectRoutes(routeConfig);
-  const routes = removeDuplicates(collected);
+  const routeConfig = loadRouteConfig();
 
-  validateRoutes(routes);
-
-  routes.sort((a, b) => a.url.localeCompare(b.url, "ru"));
-
-  /*
-   * Главная всегда первой.
-   */
-  routes.sort((a, b) => {
-    if (a.url === "/") return -1;
-    if (b.url === "/") return 1;
-
-    return a.url.localeCompare(b.url, "ru");
-  });
+  const routes = uniqueRoutes(collectRoutes(routeConfig));
 
   const sitemap = createSitemap(routes);
 
-  fs.mkdirSync(PUBLIC_DIR, {
-    recursive: true,
-  });
+  fs.writeFileSync(sitemapPath, sitemap, "utf8");
 
-  fs.writeFileSync(SITEMAP_FILE, sitemap, "utf8");
+  console.log(`Sitemap generated: ${routes.length} URLs`);
 
-  updateReactSnapInclude(routes);
+  console.log(`File: ${path.relative(projectRoot, sitemapPath)}`);
 
-  console.log("");
-  console.log(`Pages: ${routes.length}`);
-  console.log(`Sitemap: ${SITEMAP_FILE}`);
-  console.log("reactSnap.include: updated");
-  console.log("");
-
-  for (const route of routes) {
-    console.log(route.url);
-  }
-
-  console.log("");
-  console.log("Sitemap generated successfully.");
+  console.log("========================================");
 }
 
-try {
-  main();
-} catch (error) {
-  console.error("");
-  console.error("SITEMAP GENERATION FAILED");
-  console.error("");
-  console.error(error.message);
-  process.exit(1);
-}
+main();

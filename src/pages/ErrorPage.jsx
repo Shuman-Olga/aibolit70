@@ -1,44 +1,27 @@
-import { Container } from "react-bootstrap";
-import { Link, useRouteError } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function ErrorPage() {
-  const error = useRouteError();
-
-  const status = error?.status || 404;
-
-  const title = status === 404 ? "Страница не найдена" : "Произошла ошибка";
-
-  const description =
-    status === 404
-      ? "К сожалению, такой страницы не существует или она была перемещена."
-      : "Попробуйте обновить страницу или вернуться на главную.";
   return (
-    <Container fluid id="error">
-      <Container className="my-5">
-        <h1>
-          {status} — {title}
-        </h1>
+    <>
+      <Helmet>
+        <title>404 — Страница не найдена | Айболит</title>
+        <meta name="description" content="Запрашиваемая страница не найдена." />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
 
-        <p>{description}</p>
+      <main className="container py-5">
+        <div className="text-center">
+          <h1>404</h1>
 
-        <section className="error-container">
-          <span className="four">
-            <span className="screen-reader-text">4</span>
-          </span>
-          <span className="zero">
-            <span className="screen-reader-text">0</span>
-          </span>
-          <span className="four">
-            <span className="screen-reader-text">4</span>
-          </span>
-        </section>
+          <p className="lead">Страница не найдена.</p>
 
-        <div className="link-container">
-          <Link href="/" className="more-link">
-            На главную
+          <Link to="/" className="btn btn-primary">
+            Вернуться на главную
           </Link>
         </div>
-      </Container>
-    </Container>
+      </main>
+    </>
   );
 }

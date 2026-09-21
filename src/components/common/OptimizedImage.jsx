@@ -21,6 +21,7 @@ export default function OptimizedImage({
   width,
   height,
   loading = "lazy",
+  fetchPriority,
   className,
   ...props
 }) {
@@ -60,8 +61,7 @@ export default function OptimizedImage({
         alt={alt}
         title={title}
         loading={loading}
-        // decoding="async"
-        // fetchPriority={loading === "eager" ? "high" : "auto"}
+        {...(fetchPriority ? { fetchpriority: fetchPriority } : {})}
         width={width}
         height={height}
         className={className}

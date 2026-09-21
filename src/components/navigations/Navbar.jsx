@@ -1,18 +1,64 @@
 import { useEffect, useRef } from "react";
 import Collapse from "bootstrap/js/dist/collapse";
 
-import { routesMain } from "../../routes/index";
-
+import routeConfig from "../../routes/routeConfig";
 import MenuItems from "./MenuItems";
 import Search from "../Search";
 import Icon from "../common/Icon";
 
-import { buildNavigation } from "./navigationUtils";
+function normalizePath(path = "") {
+  return String(path).trim().replace(/^\/+/, "").replace(/\/+$/, "");
+}
+
+function buildPath(parentPath, currentPath) {
+  const current = normalizePath(currentPath);
+
+  if (!current) {
+    return parentPath || "/";
+  }
+
+  const parent = normalizePath(parentPath);
+
+  return parent ? `/${parent}/${current}/` : `/${current}/`;
+}
+
+function prepareRoutes(routes = [], parentPath = "") {
+  return routes
+    .filter((route) => {
+      if (!route) return false;
+      if (route.index) return false;
+      if (route.path === "*") return false;
+
+      // Не показываем служебные страницы
+      if (route.path === "/search/" || route.path === "search") {
+        return false;
+      }
+
+      // Главная не нужна в основном меню
+      if (route.path === "/") {
+        return false;
+      }
+
+      // В меню попадают только явно разрешённые пункты
+      return route.handle?.nav === true;
+    })
+    .map((route) => {
+      const fullPath = buildPath(parentPath, route.path);
+
+      return {
+        ...route,
+        to: fullPath,
+        children: prepareRoutes(route.children || [], fullPath),
+      };
+    });
+}
 
 export default function Navbar() {
   const collapseRef = useRef(null);
 
-  const menu = buildNavigation(routesMain?.[0]?.children || []);
+  // ВАЖНО:
+  // меню строим из routeConfig, а не из routesMain
+  const menu = prepareRoutes(routeConfig);
 
   const closeMenu = () => {
     if (!collapseRef.current) return;

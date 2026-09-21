@@ -1,10 +1,23 @@
 import { NavLink } from "react-router-dom";
-
 import Dropdown from "./Dropdown";
-import { hasDropdown } from "./navigationUtils";
 
 export default function MenuItems({ items, onClick }) {
-  const showDropdown = hasDropdown(items);
+  const children =
+    items?.children?.filter(
+      (child) =>
+        !child.index && child.path !== "*" && child.handle?.nav === true,
+    ) || [];
+
+  /*
+   * Услуги и Блог специально не раскрываем.
+   */
+  const showDropdown =
+    children.length > 0 &&
+    items.handle?.dropdown !== false &&
+    items.path !== "/uslugi-i-ceny/" &&
+    items.path !== "uslugi-i-ceny" &&
+    items.path !== "/blog/" &&
+    items.path !== "blog";
 
   return (
     <li className={`nav-item ${showDropdown ? "dropdown" : ""} d-flex`}>
@@ -16,7 +29,7 @@ export default function MenuItems({ items, onClick }) {
         <>
           <button
             type="button"
-            id={`dropdown-${items.path}`}
+            id={`dropdown-${items.to.replace(/\//g, "-")}`}
             className="btn dropdown-toggle dropdown-toggle-split ms-1"
             data-bs-toggle="dropdown"
             aria-expanded="false"

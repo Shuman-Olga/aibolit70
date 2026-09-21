@@ -24,20 +24,20 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "webpack serve --open --config webpack/dev.js",
+    "dev": "webpack serve --open --config webpack/dev.js",
     "optimize-images": "node scripts/optimize-images.js",
     "routes:check": "node scripts/check-route-config.js",
     "sitemap": "node scripts/generate-sitemap.js",
-    "build": "webpack --config webpack/prod.js",
+    "generate:react-snap": "node scripts/generate-react-snap.js",
+    "build:webpack": "webpack --config webpack/prod.js",
     "build:snap": "npm run build && react-snap",
-    "build:seo": "npm run routes:check && npm run build && npm run sitemap && react-snap",
+    "build:seo": "npm run routes:check && npm run build:webpack && npm run sitemap && react-snap",
+    "build": "npm run generate:react-snap && npm run build:seo",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
   "reactSnap": {
     "source": "build",
-    "skipThirdPartyRequests": true,
-    "inlineCss": false,
     "crawl": false,
     "include": [
       "/",
@@ -92,21 +92,21 @@
       "/uslugi-i-ceny/pediatr/",
       "/uslugi-i-ceny/vyzov-pediatra-na-dom/"
     ],
-    "ignore": [
-      "/docs/",
-      "*.pdf"
-    ],
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    },
-    "puppeteer": {
-      "timeout": 90000
-    },
+    "skipThirdPartyRequests": true,
+    "inlineCss": false,
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
-    ]
+    ],
+    "puppeteer": {
+      "timeout": 90000
+    },
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true,
+      "removeRedundantAttributes": true,
+      "useShortDoctype": true
+    }
   },
   "eslintConfig": {
     "extends": [

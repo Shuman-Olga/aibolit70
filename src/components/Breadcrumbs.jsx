@@ -4,9 +4,19 @@ import { Breadcrumb, Container } from "react-bootstrap";
 export default function Breadcrumbs() {
   const matches = useMatches();
 
-  const crumbs = matches.filter((m) => m.handle?.crumb);
+  // Берём только маршруты, у которых определён breadcrumb
+  const crumbs = matches
+    .filter((match) => match.handle?.crumb)
+    .filter(
+      (match, index, array) =>
+        index === array.findIndex((item) => item.pathname === match.pathname),
+    );
 
-  if (crumbs.length <= 1) return null;
+  // Для главной страницы или одного breadcrumb
+  // хлебные крошки не показываем
+  if (crumbs.length <= 1) {
+    return null;
+  }
 
   return (
     <Container id="breadcrumbs">
@@ -14,9 +24,10 @@ export default function Breadcrumbs() {
         {crumbs.map((match, index) => {
           const isFirst = index === 0;
           const isLast = index === crumbs.length - 1;
+
           return (
             <Breadcrumb.Item
-              key={match.pathname}
+              key={`${match.id ?? "route"}-${match.pathname}-${index}`}
               linkProps={{ to: match.pathname }}
               linkAs={Link}
               active={isLast}
@@ -28,7 +39,9 @@ export default function Breadcrumbs() {
                     : "me-2"
               }>
               {isFirst ? (
-                <span className="material-icons">home</span>
+                <span className="material-icons" aria-hidden="true">
+                  home
+                </span>
               ) : (
                 match.handle.crumb
               )}

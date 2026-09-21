@@ -9,15 +9,16 @@ export default function BlockImg() {
     <Container id="blockimg" className="">
       <div className="position-relative position-img">
         <OptimizedImage
-          src={"img-home.jpg"}
-          alt="img-background"
+          src="img-home.jpg"
+          alt="Детская медицинская служба Айболит в Томске"
           className="img-background"
           loading="eager"
           width={1200}
           height={600}
+          fetchPriority="high"
           // style={{ width: "100%", height: "auto" }}
           decoding="async"
-          title="foto"
+          title="Детская медицинская служба Айболит"
         />
 
         <h4 className="position-absolute top-0 end-0 mt-5 me-5 h4-text">
@@ -67,11 +68,11 @@ export default function BlockImg() {
           <div className="block-btn color1">
             <div className="block-btn-border">
               <OptimizedImage
-                src={"home.png"}
+                src="home.png"
                 alt="img-home"
                 className="block-btn-img"
                 title="img-home"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 width={82}
                 height={82}
@@ -89,11 +90,11 @@ export default function BlockImg() {
           <div className="block-btn color2">
             <div className="block-btn-border">
               <OptimizedImage
-                src={"calling.png"}
+                src="calling.png"
                 alt="img-programm"
                 className="block-btn-img2"
                 title="img-programm"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 width={63}
                 height={63}
@@ -111,11 +112,11 @@ export default function BlockImg() {
           <div className="block-btn color3">
             <div className="block-btn-border">
               <OptimizedImage
-                src={"analyzes.png"}
+                src="analyzes.png"
                 alt="img-analyz"
                 className="block-btn-img"
                 title="img-analyz"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 width={82}
                 height={61}
