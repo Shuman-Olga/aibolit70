@@ -61,10 +61,11 @@ export default function OptimizedImage({
         alt={alt}
         title={title}
         loading={loading}
-        {...(fetchPriority ? { fetchpriority: fetchPriority } : {})}
+        fetchPriority={fetchPriority}
         width={width}
         height={height}
         className={className}
+        decoding="async"
         {...props}
       />
     </picture>

@@ -48,68 +48,15 @@ ServerSignature Off
     # NORMALIZE DOUBLE SLASHES
     # =====================================================
 
-    # -----------------------------------------------------
-    # Двойной слэш сразу после домена
-    #
-    # //uslugi-i-ceny/
-    #        ↓ 301
-    # /uslugi-i-ceny/
-    # -----------------------------------------------------
-
-    RewriteCond %{REQUEST_URI} ^//+(.*)$
+    RewriteCond %{THE_REQUEST} "^[A-Z]+\s+//+([^?\s]+)" [NC]
     RewriteRule ^ https://aibolit70.ru/%1 [R=301,L,NE]
 
 
-    # -----------------------------------------------------
-    # Двойной слэш внутри URL
-    #
-    # /uslugi//i-ceny/
-    #        ↓ 301
-    # /uslugi/i-ceny/
-    # -----------------------------------------------------
+    RewriteCond %{THE_REQUEST} "^[A-Z]+\s+(/[^\s?]*?)/{2,}(?:[?\s])" [NC]
+    RewriteRule ^ https://aibolit70.ru%1/ [R=301,L,NE]
 
-    RewriteCond %{REQUEST_URI} ^/(.*)//+(.*)$
-    RewriteRule ^ https://aibolit70.ru/%1/%2 [R=301,L,NE]
-
-
-    # =====================================================
-    # TRAILING SLASH
-    #
-    # Добавляем / только для URL-маршрутов.
-    # Реальные файлы не затрагиваем.
-    # =====================================================
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_URI} !/$
-    RewriteCond %{REQUEST_URI} !\.[^./]+$
-    RewriteRule ^(.+)$ https://aibolit70.ru/$1/ [R=301,L]
-
-
-    # =====================================================
-    # REMOVE INDEX / DEFAULT / MAIN
-    # =====================================================
-
-    RewriteCond %{THE_REQUEST} \s/+(.*/)?(?:index|default|main)\.(?:html?|php)\s [NC]
-    RewriteRule ^(.*/)?(?:index|default|main)\.(?:html?|php)$ https://aibolit70.ru/$1 [R=301,L]
-
-
-    # =====================================================
-    # REAL FILES / REAL DIRECTORIES
-    # =====================================================
-
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-
-
-    # =====================================================
-    # UNKNOWN URL → REAL HTTP 404
-    #
-    # React SPA fallback отсутствует намеренно.
-    # =====================================================
-
-    RewriteRule ^ - [R=404,L]
-
+    RewriteCond %{THE_REQUEST} "^[A-Z]+\s+(/[^\s?]*?)/{2,}([^\s?]*)" [NC]
+    RewriteRule ^ https://aibolit70.ru%1%2 [R=301,L,NE]
 </IfModule>
 
 
