@@ -54,7 +54,7 @@ export default function OurPartners() {
               target="_blank"
               rel="noopener noreferrer"
               className=" fs-4 fw-bold">
-              https://tomoko.ru
+              https://tomoko.ru/
             </a>
           </div>
         </div>
