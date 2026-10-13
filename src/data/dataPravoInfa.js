@@ -7,11 +7,11 @@ export const dataPravoInfa = [
   },
   {
     title: "Территориальная программа госгарантий",
-    pdf: "programma_2024.pdf",
+    pdf: "programma_gosudarstvennyh_garantij_Postanovlenie_Administratsii_Tomskoy_oblasti.pdf",
   },
   {
     title: "Лекарственное обеспечение",
-    pdf: "perechen_zhiznenno_neobhodimyh_i_vazhnejshih_lekarstvennyh_preparatov_dlya_medicinskogo_primeneniya_2024.pdf",
+    pdf: "perechen_zhiznenno_neobhodimyh_i_vazhnejshih_lekarstvennyh_preparatov_dlya_medicinskogo_primeneniya.pdf",
   },
   {
     title: "Права и обязанности граждан в сфере охраны здоровья",
@@ -42,6 +42,6 @@ export const dataPravoInfa = [
   },
   {
     title: "Правила предоставление платных медицинских услуг ",
-    pdf: "736medkadry.pdf",
+    pdf: "Postanovlenie-659-ot-30-05-2026.pdf",
   },
 ];

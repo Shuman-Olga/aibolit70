@@ -6,7 +6,7 @@ export default function BlockInfo() {
   return (
     <Container fluid id="blockinfo">
       <Container>
-        <h1 className="h1-font">Айболит-детская медицинская служба В Томске</h1>
+        <h2 className="h1-font">Айболит-детская медицинская служба В Томске</h2>
         <div className="d-flex justify-content-around">
           <OptimizedImage
             src={"foto_1000w.jpg"}

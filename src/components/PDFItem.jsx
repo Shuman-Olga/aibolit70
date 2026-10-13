@@ -19,7 +19,7 @@ export default function PDFItem({ title, pdf }) {
           target="_blank"
           rel="noopener noreferrer"
           className="btn mx-4">
-          Посмотерть
+          Посмотреть
         </Button>
       </div>
       <hr />

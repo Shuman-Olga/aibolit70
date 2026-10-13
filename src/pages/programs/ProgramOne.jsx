@@ -130,7 +130,7 @@ export default function ProgramOne() {
                       <p className="ms-5">Корь, краснуха, паротит </p>
                       <p className="ms-5">Гемофильная инфекция</p>
                       <p className="ms-5">Пневмококковая инфекция</p>
-                      <p className="ms-5">Ротофирусная инфекция</p>
+                      <p className="ms-5">Ротавирусная инфекция</p>
                       <p className="ms-5">Менингококковая инфекция</p>
                     </td>
                     <td>
@@ -173,8 +173,8 @@ export default function ProgramOne() {
                       <p className="fw-bold">- за двух детей</p>
                     </td>
                     <td>
-                      <p className="fw-bold">9 500 руб.**</p>
-                      <p className="fw-bold">14 500 руб.**</p>
+                      <p className="fw-bold">11 000 руб.**</p>
+                      <p className="fw-bold">16 500 руб.**</p>
                     </td>
                   </tr>
                   <tr className="table-group-divider font-text">
@@ -230,7 +230,7 @@ export default function ProgramOne() {
                       <p className="ms-5">Корь, краснуха, паротит </p>
                       <p className="ms-5">Гемофильная инфекция</p>
                       <p className="ms-5">Пневмококковая инфекция</p>
-                      <p className="ms-5">Ротофирусная инфекция</p>
+                      <p className="ms-5">Ротавирусная инфекция</p>
                       <p className="ms-5">Менингококковая инфекция</p>
                     </td>
                     <td>
@@ -273,8 +273,8 @@ export default function ProgramOne() {
                       <p className="fw-bold">- за двух детей</p>
                     </td>
                     <td>
-                      <p className="fw-bold">7 500 руб.**</p>
-                      <p className="fw-bold">10 000 руб.**</p>
+                      <p className="fw-bold">8 700 руб.**</p>
+                      <p className="fw-bold">13 100 руб.**</p>
                     </td>
                   </tr>
                   <tr className="table-group-divider font-text">

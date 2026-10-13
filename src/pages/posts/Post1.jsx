@@ -357,7 +357,7 @@ export default function Post1() {
           <h5 className="my-4"> Стоимость вызова врача</h5>
           <p className="text-center">
             <span className="fw-bold fst-itali ">
-              Невролог детский, консультация на дому --------------------- 3 500
+              Невролог детский, консультация на дому --------------------- 4 000
               р.*
             </span>
           </p>

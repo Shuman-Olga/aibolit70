@@ -32,7 +32,7 @@ export default function SvedeniyaSpecialistah() {
                 </NavLink>
               </th>
               <td>Директор, Врач - педиатр, аллерголог</td>
-              <td>32 года</td>
+              <td>34 года</td>
               <td>«Педиатрия» действует до 25.12.2024 г.</td>
             </tr>
             <tr>
@@ -46,8 +46,8 @@ export default function SvedeniyaSpecialistah() {
                 </NavLink>
               </th>
               <td>Главный врач, Врач - педиатр</td>
-              <td>27 лет</td>
-              <td>«Педиатрия» действует до 15.05.2024 г.</td>
+              <td>29 лет</td>
+              <td>«Педиатрия» действует до 27.11.2030 г.</td>
             </tr>
             <tr>
               <th scope="row">
@@ -60,7 +60,7 @@ export default function SvedeniyaSpecialistah() {
                 </NavLink>
               </th>
               <td>Врач - педиатр, неонатолог</td>
-              <td>32 года</td>
+              <td>34 года</td>
               <td>«Педиатрия» действует до 09.12.2025 г.</td>
             </tr>
             <tr>
@@ -74,8 +74,8 @@ export default function SvedeniyaSpecialistah() {
                 </NavLink>
               </th>
               <td>Врач - педиатр, Остеопатические техники</td>
-              <td>31 год</td>
-              <td>«Педиатрия» действует до 20.11.2025 г.</td>
+              <td>33 год</td>
+              <td>«Педиатрия» действует до 25.11.2030 г.</td>
             </tr>
           </tbody>
         </table>

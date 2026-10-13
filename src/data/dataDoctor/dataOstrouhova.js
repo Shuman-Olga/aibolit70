@@ -58,6 +58,6 @@ export const dataOstrouhova = {
       type: 'Повышение квалификации "Основы остеопатии"',
     },
   ],
-  certificate: { type: "«Педиатрия»", data: "20.11.", year: 2020 },
+  certificate: { type: "«Педиатрия»", data: "25.11.", year: 2025 },
   experience: 1993,
 };

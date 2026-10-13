@@ -81,6 +81,6 @@ export const dataPetuhova = {
       type: 'Повышение квалификации "Педиатрия"',
     },
   ],
-  certificate: { type: "«Педиатрия»", data: "15.05.", year: 2019 },
+  certificate: { type: "«Педиатрия»", data: "27.11.", year: 2025 },
   experience: 1997,
 };

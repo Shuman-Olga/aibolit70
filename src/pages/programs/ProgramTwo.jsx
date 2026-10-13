@@ -143,8 +143,8 @@ export default function ProgramTwo() {
                   <p className="fw-bold">Стоимость в месяц за двух детей</p>
                 </td>
                 <td>
-                  <p className="fw-bold">7 000 руб.**</p>
-                  <p className="fw-bold">10 000 руб.**</p>
+                  <p className="fw-bold">8 100 руб.**</p>
+                  <p className="fw-bold">12 200 руб.**</p>
                 </td>
               </tr>
               <tr className="table-group-divider font-text">

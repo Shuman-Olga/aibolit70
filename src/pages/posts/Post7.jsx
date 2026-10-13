@@ -404,7 +404,7 @@ export default function Post7() {
           <p className="text-center">
             <span className="fw-bold fst-itali ">
               ЛОР (отоларинголог) детский, консультация на дому
-              --------------------- 3 500 р.*
+              --------------------- 4 000 р.*
             </span>
           </p>
           <p className="mt-4">

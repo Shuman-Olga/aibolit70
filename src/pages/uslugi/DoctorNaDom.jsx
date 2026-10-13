@@ -61,9 +61,9 @@ export default function DoctorNaDom() {
                   <p className="fw-bold"> - (Особо отдаленные районы)</p>
                 </td>
                 <td>
-                  <p className="fw-bold">3 500 руб.</p>
                   <p className="fw-bold">4 000 руб.</p>
-                  <p className="fw-bold">4 500 руб.</p>
+                  <p className="fw-bold">4 600 руб.</p>
+                  <p className="fw-bold">5 200 руб.</p>
                 </td>
               </tr>
             </tbody>

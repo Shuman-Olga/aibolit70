@@ -122,8 +122,8 @@ export default function ProgramThree() {
                   <p className="fw-bold">- за двух детей</p>
                 </td>
                 <td>
-                  <p className="fw-bold">6 000 руб.**</p>
-                  <p className="fw-bold">9 000 руб.**</p>
+                  <p className="fw-bold">6 900 руб.**</p>
+                  <p className="fw-bold">10 400 руб.**</p>
                 </td>
               </tr>
               <tr className="table-group-divider font-text ">

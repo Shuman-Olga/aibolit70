@@ -230,7 +230,7 @@ export default function Post10() {
             <tbody>
               <tr>
                 <td>Чек-ап в 3 мес, 6 мес, 1 год НА ДОМУ</td>
-                <td>13 000 руб.</td>
+                <td>14 500 руб.</td>
               </tr>
             </tbody>
           </table>

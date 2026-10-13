@@ -95,6 +95,6 @@ export const dataSadovnikova = {
       type: 'Профессиональная переподготовка "Педиатрия"',
     },
   ],
-  certificate: { type: "«Педиатрия»", data: "25.12.", year: 2019 },
+  certificate: { type: "«Педиатрия»", data: "25.11.", year: 2025 },
   experience: 1992,
 };

@@ -351,7 +351,7 @@ export default function Post3() {
           <h5 className="my-3"> Стоимость вызова врача</h5>
           <p className="text-center">
             <span className="fw-bold fst-itali ">
-              Детский хирург, консультация на дому --------------------- 3 500
+              Детский хирург, консультация на дому --------------------- 4 000
               р.*
             </span>
           </p>

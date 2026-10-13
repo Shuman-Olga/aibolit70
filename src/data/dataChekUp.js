@@ -35,7 +35,7 @@ export const dataChekUp = [
         nameEl: "кал на копрограмму",
       },
     ],
-    price: "19 000",
+    price: "21 000",
     path: "сhek-ap-v-1-mesjats",
   },
   {
@@ -62,7 +62,7 @@ export const dataChekUp = [
         nameEl: "кал на копрограмму",
       },
     ],
-    price: "13 000",
+    price: "14 500",
     path: "сhek-ap-pered-detskim-sado-shkoloj",
   },
   {
@@ -92,7 +92,7 @@ export const dataChekUp = [
         nameEl: "Оформление карты",
       },
     ],
-    price: "14 000",
+    price: "15 500",
     path: "сhek-ap-pered-detskim-sado-shkoloj",
   },
 ];

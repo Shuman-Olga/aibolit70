@@ -33,7 +33,7 @@ export default function Header() {
           </p>
           <p className="date text-center fw-bolder">
             Пн-пт: 08:00 - 19:00
-            <br /> Суб: 09:00 - 14:00
+            <br /> Сб: 09:00 - 14:00
           </p>
         </div>
         <div>

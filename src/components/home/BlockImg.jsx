@@ -20,43 +20,58 @@ export default function BlockImg() {
           decoding="async"
           title="Детская медицинская служба Айболит"
         />
+        <div className="position-absolute d-block top-0 end-0 mt-1 mb-5 me-5">
+          <div className="my-5">
+            <h1 className="h4-text">Вызов педиатра на дом в Томске</h1>
+          </div>
+          <div className="my-5">
+            <h4 className=" h4-text">
+              Заботимся о здоровье ваших детей с 2001 года
+            </h4>
+          </div>
 
-        <h4 className="position-absolute top-0 end-0 mt-5 me-5 h4-text">
-          Заботимся о здоровье ваших детей с 2001 года
-        </h4>
-        <div className="position-absolute bottom-50 end-0 me-5 btn-callback">
-          <ul>
-            <li>
-              <NavLink
-                to="uslugi-i-ceny/pediatr/"
-                target="_top"
-                rel="noopener noreferrer"
-                relative="path">
-                ПЕДИАТРЫ
-              </NavLink>
-            </li>
-            <li>
-              <Link
-                to="programmy-nablyudeniya-za-zdorovem/"
-                target="_top"
-                rel="noopener noreferrer">
-                ДЕТСКИЕ МЕДИЦИНСКИЕ ПРОГРАММЫ
-              </Link>
-            </li>
-            <li>
-              <Link to="chek-up/" target="_top" rel="noopener noreferrer">
-                МЕДОСМОТРЫ (Чек-ап)
-              </Link>
-            </li>
-            <li>
-              <Link to="uslugi-i-ceny/" target="_top" rel="noopener noreferrer">
-                Онлайн КОНСУЛЬТАЦИЯ С ПЕДИАТРОМ
-              </Link>
-            </li>
-          </ul>{" "}
-          <ModalWindows title="Вызов врача на дом" name="Header">
-            <FormCallingDoctor />
-          </ModalWindows>
+          <div className=" btn-callback">
+            <div>
+              <ul>
+                <li>
+                  <NavLink
+                    to="uslugi-i-ceny/pediatr/"
+                    target="_top"
+                    rel="noopener noreferrer"
+                    relative="path">
+                    ПЕДИАТРЫ
+                  </NavLink>
+                </li>
+                <li>
+                  <Link
+                    to="programmy-nablyudeniya-za-zdorovem/"
+                    target="_top"
+                    rel="noopener noreferrer">
+                    ДЕТСКИЕ МЕДИЦИНСКИЕ ПРОГРАММЫ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="chek-up/" target="_top" rel="noopener noreferrer">
+                    МЕДОСМОТРЫ (Чек-ап)
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="uslugi-i-ceny/"
+                    target="_top"
+                    rel="noopener noreferrer">
+                    Онлайн КОНСУЛЬТАЦИЯ С ПЕДИАТРОМ
+                  </Link>
+                </li>
+              </ul>{" "}
+            </div>
+
+            <div className="d-flex justify-content-center p-3">
+              <ModalWindows title="Вызов врача на дом" name="Header">
+                <FormCallingDoctor />
+              </ModalWindows>
+            </div>
+          </div>
         </div>
       </div>
       <div className=" wrapper-block-btn">
@@ -78,7 +93,7 @@ export default function BlockImg() {
                 height={82}
               />
 
-              <p className="text-center">Вызов врача на дом</p>
+              <p className="text-center">Вызов педиатра на дом</p>
             </div>
           </div>
         </NavLink>
